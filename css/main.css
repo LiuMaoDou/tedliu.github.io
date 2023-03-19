@@ -249,14 +249,24 @@ hr {
   margin: 40px 0;
 }
 blockquote {
-  border-left: 4px solid #ddd;
-  color: var(--blockquote-color);
-  margin: 0;
-  padding: 0 15px;
+  background: #f9f9f9;
+  border-left: 10px solid #ccc;
+  margin: 1.5em 10px;
+  padding: 0.5em 10px;
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  font-size: 0.8em;
+  border-radius: 6px;
 }
-blockquote cite::before {
-  content: '-';
-  padding: 0 5px;
+blockquote p {
+  margin: 0;
+}
+blockquote:before {
+  color: #ccc;
+  content: open-quote;
+  font-size: 4em;
+  line-height: 0.1em;
+  margin-right: 0.25em;
+  vertical-align: -0.4em;
 }
 dt {
   font-weight: bold;
@@ -1219,7 +1229,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #115288;
+  background: #5ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
