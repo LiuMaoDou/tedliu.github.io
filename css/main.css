@@ -193,7 +193,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'alimama', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'youai', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -1229,7 +1229,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #282b8e;
+  background: #830a3e;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2746,4 +2746,9 @@ body {
   font-family: "DongFangDaKai";
   font-display: swap;
   src: url("/fonts/Alimama_DongFangDaKai_Regular.woff2");
+}
+@font-face {
+  font-family: "youai";
+  font-display: swap;
+  src: url("/fonts/youai.woff2");
 }
