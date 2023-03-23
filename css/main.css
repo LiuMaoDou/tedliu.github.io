@@ -493,7 +493,7 @@ pre {
 }
 pre,
 code {
-  font-family: 'Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'SourceCodePro', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -1276,7 +1276,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #fef;
+  background: #ffffbe;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2798,6 +2798,21 @@ body {
   font-family: "youai";
   font-display: swap;
   src: url("/fonts/youai.woff2");
+}
+@font-face {
+  font-family: "monaco";
+  font-display: swap;
+  src: url("/fonts/monaco.woff2");
+}
+@font-face {
+  font-family: "Menlo-ted";
+  font-display: swap;
+  src: url("/fonts/Menlo-Bold.woff2");
+}
+@font-face {
+  font-family: "SourceCodePro";
+  font-display: swap;
+  src: url("/fonts/SourceCodePro-Bold.otf.woff2");
 }
 /* 隐藏顶部线条 */
 .headband {
