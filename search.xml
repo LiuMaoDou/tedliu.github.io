@@ -1,11 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title></title>
-    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>01 {Hexo+Github}</title>
     <url>/2023/03/19/01%20%7BHexo+Github%7D/</url>
     <content><![CDATA[<h2 id="Hexo命令集合"><a href="#Hexo命令集合" class="headerlink" title="Hexo命令集合"></a>Hexo命令集合</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo s # http://localhost:4000</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
@@ -14,7 +9,7 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
 </blockquote>
@@ -30,6 +25,11 @@
 <li></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>02 {语录}</title>
+    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>04 {Nokia-ALU}</title>
@@ -88,12 +88,12 @@
 </tr>
 </tbody></table>
 <p>- </p>
-<h2 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Conﬁguring the AS number</span></span><br><span class="line">configure router autonomous-system 64501</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring the router ID</span></span><br><span class="line">configure router router-id 10.16.10.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring peer group and group parameters</span></span><br><span class="line">configure router bgp</span><br><span class="line">	group <span class="string">&quot;ibgp&quot;</span> </span><br><span class="line">		description <span class="string">&quot;AS 64501 iBGP Mesh&quot;</span> </span><br><span class="line">		peer-as 64501 </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<h2 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Conﬁguring the AS number</span></span><br><span class="line">configure router autonomous-system 64501</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring the router ID</span></span><br><span class="line">configure router router-id 10.16.10.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring peer group and group parameters</span></span><br><span class="line">configure router bgp</span><br><span class="line">	group <span class="string">&quot;ibgp&quot;</span> </span><br><span class="line">		description <span class="string">&quot;AS 64501 iBGP Mesh&quot;</span> </span><br><span class="line">		peer-as 64501 </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
 
 
 
 <h2 id="LDP-over-RSVP"><a href="#LDP-over-RSVP" class="headerlink" title="LDP over RSVP"></a>LDP over RSVP</h2><h3 id="Base"><a href="#Base" class="headerlink" title="Base"></a>Base</h3><p>From Huawei:</p>
-<p><img src="https://support.huawei.com/hedex/api/pages/DOC1101022917/AZL1117J/01/resources/vrp/images/fig_feature_image_0003998285.png" alt="img"></p>
+<p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202303261820944.png" alt="img"></p>
 <p>RSVP TE是一种MPLS隧道技术，生成的LSP可以提供给其他业务报文作为隧道，用来透传数据报文。LDP是另一种MPLS隧道技术，用于生成LDP LSP。LDP Over TE技术使LDP的LSP跨过RSVP TE区域，即TE Tunnel作为整个LDP LSP的“一跳”。</p>
 <p>在RSVP TE隧道建立完毕后，IGP（如OSPF、ISIS）可以通过本地的计算，或者通过发布LSA，让路由的出接口选中TE的隧道。可以认为起始路由器和TE隧道的目的路由器通过TE的隧道接口（逻辑接口）直接相连，报文实际转发时，是通过TE的隧道透传。</p>
 <ol>
@@ -106,8 +106,8 @@
 <li><p>P1收到Label Mapping消息后，继续发布Label Mapping消息给PE1，标签值为LDP-Label-3。P1和P3上配置IGP Shortcut或者转发邻接，同时配置remote ldp</p>
 </li>
 <li><p>配置</p>
-<p><img src="https://support.huawei.com/hedex/api/pages/DOC1101022917/AZL1117J/01/resources/vrp/figure/zh-cn_image_0000001308446286.png" alt="img"></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 转发邻接为例子</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">sysname LSRB</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls lsr-id 2.2.2.2</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls</span><br><span class="line">  mpls te</span><br><span class="line">  mpls rsvp-te</span><br><span class="line">  mpls te cspf</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls ldp</span><br><span class="line"> <span class="comment">#</span></span><br><span class="line"> ipv4-family</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls ldp remote-peer lsrd</span><br><span class="line"> remote-ip 4.4.4.4</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface GigabitEthernet0/1/0</span><br><span class="line"> undo shutdown </span><br><span class="line"> ip address 10.1.1.2 255.255.255.0</span><br><span class="line"> mpls</span><br><span class="line"> mpls ldp</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface GigabitEthernet0/2/0</span><br><span class="line"> undo shutdown </span><br><span class="line"> ip address 10.2.1.1 255.255.255.0</span><br><span class="line"> mpls</span><br><span class="line"> mpls te</span><br><span class="line"> mpls rsvp-te</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface LoopBack1</span><br><span class="line"> ip address 2.2.2.2 255.255.255.255</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface Tunnel1</span><br><span class="line"> ip address unnumbered interface LoopBack1</span><br><span class="line"> tunnel-protocol mpls te</span><br><span class="line"> destination 4.4.4.4</span><br><span class="line"> mpls te igp advertise</span><br><span class="line"> mpls te igp metric absolute 1</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">ospf 1</span><br><span class="line"> opaque-capability <span class="built_in">enable</span></span><br><span class="line"> <span class="built_in">enable</span> traffic-adjustment advertise</span><br><span class="line"> area 0.0.0.0</span><br><span class="line">  network 2.2.2.2 0.0.0.0</span><br><span class="line">  network 10.1.1.0 0.0.0.255</span><br><span class="line">  network 10.2.1.0 0.0.0.255</span><br><span class="line">  mpls-te <span class="built_in">enable</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="built_in">return</span></span><br></pre></td></tr></table></figure></li>
+<p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202303261820846.png" alt="img"></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 转发邻接为例子</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line">sysname LSRB</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls lsr-id 2.2.2.2</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls</span><br><span class="line">  mpls te</span><br><span class="line">  mpls rsvp-te</span><br><span class="line">  mpls te cspf</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls ldp</span><br><span class="line"> <span class="comment">#</span></span><br><span class="line"> ipv4-family</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">mpls ldp remote-peer lsrd</span><br><span class="line"> remote-ip 4.4.4.4</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface GigabitEthernet0/1/0</span><br><span class="line"> undo shutdown </span><br><span class="line"> ip address 10.1.1.2 255.255.255.0</span><br><span class="line"> mpls</span><br><span class="line"> mpls ldp</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface GigabitEthernet0/2/0</span><br><span class="line"> undo shutdown </span><br><span class="line"> ip address 10.2.1.1 255.255.255.0</span><br><span class="line"> mpls</span><br><span class="line"> mpls te</span><br><span class="line"> mpls rsvp-te</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface LoopBack1</span><br><span class="line"> ip address 2.2.2.2 255.255.255.255</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">interface Tunnel1</span><br><span class="line"> ip address unnumbered interface LoopBack1</span><br><span class="line"> tunnel-protocol mpls te</span><br><span class="line"> destination 4.4.4.4</span><br><span class="line"> mpls te igp advertise <span class="comment"># mpls te igp shortcut ospf --&gt; shortcut</span></span><br><span class="line"> mpls te igp metric absolute 1</span><br><span class="line"><span class="comment">#</span></span><br><span class="line">ospf 1</span><br><span class="line"> opaque-capability <span class="built_in">enable</span></span><br><span class="line"> <span class="built_in">enable</span> traffic-adjustment advertise <span class="comment"># enable traffic-adjustment --&gt; shortcut</span></span><br><span class="line"> area 0.0.0.0</span><br><span class="line">  network 2.2.2.2 0.0.0.0</span><br><span class="line">  network 10.1.1.0 0.0.0.255</span><br><span class="line">  network 10.2.1.0 0.0.0.255</span><br><span class="line">  mpls-te <span class="built_in">enable</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="built_in">return</span></span><br></pre></td></tr></table></figure></li>
 </ol>
 <h3 id="Nokia"><a href="#Nokia" class="headerlink" title="Nokia"></a>Nokia</h3><ul>
 <li><p><a href="https://documentation.nokia.com/html/0_add-h-f/93-0267-HTML/7X50_Advanced_Configuration_Guide/LDPoRSVP.html#:~:text=On%20all%20nodes%20originating%2Fterminating%20a%20T-LDP%20session%2C%20an,ospf%20ldp-over-rsvp%20A%3AP-%20%5B1..4%5D%23%20configure%20router%20ospf%20ldp-over-rsvp">LDP over RSVP Using OSPF as IGP</a></p>
@@ -115,20 +115,25 @@
 <li><p>In this application, the bidirectional RSVP LSP tunnels are not treated as IP interfaces and are not advertised back into the IGP. A PE must always rely on the IGP to look up the next hop for a service packet. LDP-over-RSVP introduces a new tunnel type, tunnel-in-tunnel, in addition to the existing LDP tunnel and RSVP tunnel types. If multiple tunnels types match the destination PE FEC lookup, LDP prefers an LDP tunnel over an LDP-over-RSVP tunnel by default.</p>
 </li>
 <li><p>Note that whenever an RSVP LSP comes up, it is, by default, eligible for LDPoRSVP, meaning that RSVP will signal to the relevant IGP (OSPF in this case) that the LSP should be included in the IGP&#x2F;SPF run. The destination of the LSP (192.0.2.5) will be considered as a potential endpoint in the FEC resolution. With the <strong>info detail</strong> command, all default settings of a context are shown.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1<span class="comment"># configure router mpls lsp &quot;LSP-PE-1-P-1&quot;</span></span><br><span class="line">A:PE-1&gt;config&gt;router&gt;mpls&gt;lsp<span class="comment"># info detail </span></span><br><span class="line">                to 192.0.2.5</span><br><span class="line">                ...</span><br><span class="line">                ldp-over-rsvp include </span><br><span class="line">                ...</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1\<span class="comment"># configure router mpls lsp &quot;LSP-PE-1-P-1&quot;</span></span><br><span class="line">A:PE-1&gt;config&gt;router&gt;mpls&gt;lsp\<span class="comment"># info detail </span></span><br><span class="line">                to 192.0.2.5</span><br><span class="line">                ...</span><br><span class="line">                ldp-over-rsvp include </span><br><span class="line">                ...</span><br></pre></td></tr></table></figure>
 
 
 </li>
 <li><p>On all nodes originating&#x2F;terminating a T-LDP session, an explicit <strong>ldp-over-rsvp</strong> parameter must be configured to enable this OSPF instance for LDPoRSVP. In the example, this becomes.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1<span class="comment"># configure router ospf ldp-over-rsvp</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1\<span class="comment"># configure router ospf ldp-over-rsvp</span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>Enable LDPoRSVP. This is done using the <strong>tunneling</strong> keyword inside the T-LDP session context. Configuration is needed on all PE and ABR nodes.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1<span class="comment"># configure router ldp </span></span><br><span class="line">=============================================================================</span><br><span class="line">            targeted-session</span><br><span class="line">                peer 192.168.2.5</span><br><span class="line">                    tunneling</span><br><span class="line">                    <span class="built_in">exit</span></span><br><span class="line">                <span class="built_in">exit</span></span><br><span class="line">            <span class="built_in">exit</span></span><br><span class="line">=============================================================================</span><br><span class="line">A:PE-1<span class="comment"># </span></span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1\<span class="comment"># configure router ldp </span></span><br><span class="line">=============================================================================</span><br><span class="line">            targeted-session</span><br><span class="line">                peer 192.168.2.5</span><br><span class="line">                    tunneling</span><br><span class="line">                    <span class="built_in">exit</span></span><br><span class="line">                <span class="built_in">exit</span></span><br><span class="line">            <span class="built_in">exit</span></span><br><span class="line">=============================================================================</span><br><span class="line">A:PE-1<span class="comment"># </span></span><br></pre></td></tr></table></figure>
 </li>
 <li><p>If the next-hop router advertised the same FEC over link-level LDP (iLDP), LDP will prefer the iLDP tunnel by default unless the user explicitly changed the default preference using the <strong>prefer-tunnel-in-tunnel</strong> command. In this case an LDPoRSVP tunnel will have precedence.</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1<span class="comment"># configure router ldp prefer-tunnel-in-tunnel</span></span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1\<span class="comment"># configure router ldp prefer-tunnel-in-tunnel</span></span><br></pre></td></tr></table></figure></li>
 </ul>
 ]]></content>
+  </entry>
+  <entry>
+    <title>03 {时间的朋友}</title>
+    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>05 {数据分析}</title>
@@ -138,29 +143,6 @@
 
 
 ]]></content>
-  </entry>
-  <entry>
-    <title>Hello World</title>
-    <url>/2023/03/18/hello-world/</url>
-    <content><![CDATA[<p>Welcome to <a href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
-]]></content>
-  </entry>
-  <entry>
-    <title>03 {时间的朋友}</title>
-    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
-    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>06 {Python}</title>
@@ -174,16 +156,6 @@
 <li>测试网站：<a href="https://regex101.com/">regex101</a></li>
 </ul>
 <figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
-]]></content>
-  </entry>
-  <entry>
-    <title>first</title>
-    <url>/2023/03/18/first/</url>
-    <content><![CDATA[<h2 id="test"><a href="#test" class="headerlink" title="test"></a>test</h2><p><code>test</code></p>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="built_in">print</span>(<span class="string">&#x27;test&#x27;</span>)</span><br></pre></td></tr></table></figure>
-
-
 
 ]]></content>
   </entry>
