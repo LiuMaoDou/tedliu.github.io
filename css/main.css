@@ -493,7 +493,7 @@ pre {
 }
 pre,
 code {
-  font-family: 'monaco-ted, LXGW WenKai Lite', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'monaco-ted', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -1276,7 +1276,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #63ff5b;
+  background: #ffb5ff;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
