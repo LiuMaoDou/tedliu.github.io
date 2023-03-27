@@ -1,37 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01 {Hexo+Github}</title>
-    <url>/2023/03/19/01%20%7BHexo+Github%7D/</url>
-    <content><![CDATA[<h2 id="Hexo命令集合"><a href="#Hexo命令集合" class="headerlink" title="Hexo命令集合"></a>Hexo命令集合</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo s # http://localhost:4000</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;">&#x67;&#105;&#x74;&#64;&#103;&#105;&#x74;&#x68;&#117;&#x62;&#46;&#x63;&#111;&#x6d;</a> # 来测试是否有权限</p>
-<p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
-<p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
-</blockquote>
-<h2 id="字体相关"><a href="#字体相关" class="headerlink" title="字体相关"></a>字体相关</h2><ol>
-<li><a href="https://marshzero.github.io/2021/12/09/Hexo%20NexT%20%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96%20%E7%B1%BBMeme/">Hexo NexT 字体美化 类Meme</a></li>
-<li></li>
-</ol>
-<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
-<li>如何修改blockquote样式？<ol>
-<li>&#x2F;Users&#x2F;xx&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;base.styl</li>
-</ol>
-</li>
-<li></li>
-</ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>02 {语录}</title>
-    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>04 {Nokia-ALU}</title>
     <url>/2023/03/22/04%20%7BNokia-ALU%7D/</url>
     <content><![CDATA[<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><ul>
@@ -88,7 +57,14 @@
 </tr>
 </tbody></table>
 <p>- </p>
-<h2 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Conﬁguring the AS number</span></span><br><span class="line">configure router autonomous-system 64501</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring the router ID</span></span><br><span class="line">configure router router-id 10.16.10.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring peer group and group parameters</span></span><br><span class="line">configure router bgp</span><br><span class="line">	group <span class="string">&quot;ibgp&quot;</span> </span><br><span class="line">		description <span class="string">&quot;AS 64501 iBGP Mesh&quot;</span> </span><br><span class="line">		peer-as 64501 </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line"><span class="built_in">exit</span></span><br></pre></td></tr></table></figure>
+<h2 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Conﬁguring the AS number</span></span><br><span class="line">configure router autonomous-system 64501</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring the router ID</span></span><br><span class="line">configure router router-id 10.16.10.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring peer group and group parameters</span></span><br><span class="line">configure router bgp</span><br><span class="line">	group <span class="string">&quot;ibgp&quot;</span> </span><br><span class="line">		description <span class="string">&quot;AS 64501 iBGP Mesh&quot;</span> </span><br><span class="line">		peer-as 64501 </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In SR OS, a router assumes the role of an RR when a Cluster-ID is configured</span></span><br><span class="line">RR1\<span class="comment"># configure router bgp</span></span><br><span class="line">  group <span class="string">&quot;ebgp&quot;</span> </span><br><span class="line">    loop-detect discard-route </span><br><span class="line">    peer-as 64501 </span><br><span class="line">    neighbor 10.0.0.1 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line">  group <span class="string">&quot;RR1_Clients&quot;</span> </span><br><span class="line">    next-hop-self </span><br><span class="line">    cluster 10.10.10.1 </span><br><span class="line">    peer-as 64500 </span><br><span class="line">    neighbor 10.16.10.5 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">    neighbor 10.16.10.6 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line">  no shutdown</span><br></pre></td></tr></table></figure>
+
+<h3 id="Configuring-Route-Reflection"><a href="#Configuring-Route-Reflection" class="headerlink" title="Configuring Route Reflection"></a>Configuring Route Reflection</h3><p>Route reflection can be implemented in autonomous systems with a large internal BGP mesh to reduce the number of IBGP sessions required. One or more routers can be selected to act as focal points for internal BGP sessions. Several BGP speaking routers can peer with a route reflector. A route reflector forms peer connections to other route reflectors. <font color=Red><strong>A router assumes the role as a route reflector by configuring the cluster cluster-id command. No other command is required unless you want to disable reflection to specific peers.</strong></font><br>If you configure the cluster command at the global level, then all subordinate groups and neighbors are members of the cluster. The route reflector cluster ID is expressed in dotted- decimal notation. The ID should be a significant topology-specific value. No other command is required unless you want to disable reflection to specific peers.<br>If a route reflector client is fully meshed, the <code>disable-client-reflect</code> command can be enabled to stop the route reflector from reflecting redundant route updates to a client.<br>The following example displays route reflection configuration command usage:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">Example:</span><br><span class="line">config&gt;router<span class="comment"># bgp</span></span><br><span class="line">config&gt;router&gt;bgp<span class="comment"># cluster 0.0.0.100</span></span><br><span class="line">config&gt;router&gt;bgp<span class="comment"># group “Santa Clara”</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group$ local-address 10.0.0.103</span><br><span class="line">config&gt;router&gt;bgp&gt;group<span class="comment"># neighbor 10.0.0.91</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor$ peer-as 100</span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor<span class="comment"># exit</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group<span class="comment"># neighbor 10.0.0.92</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor$ peer-as 100</span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor<span class="comment"># exit</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group<span class="comment"># neighbor 10.0.0.93</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor$ disable-client-refl</span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor<span class="comment"># peer-as 100</span></span><br><span class="line">config&gt;router&gt;bgp&gt;group&gt;neighbor<span class="comment"># exit</span></span><br><span class="line">The following example displays a route reflection configuration:</span><br><span class="line"></span><br><span class="line">ALU-B&gt;config&gt;router&gt;bgp<span class="comment"># info</span></span><br><span class="line">---------------------------------------------</span><br><span class="line">    cluster 0.0.0.100</span><br><span class="line">    group <span class="string">&quot;Santa Clara&quot;</span></span><br><span class="line">        local-address 10.0.0.103</span><br><span class="line">        neighbor 10.0.0.91</span><br><span class="line">            peer-as 100</span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">        neighbor 10.0.0.92</span><br><span class="line">            peer-as 100</span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">        neighbor 10.0.0.93</span><br><span class="line">            disable-client-reflect</span><br><span class="line">            peer-as 100</span><br><span class="line">        <span class="built_in">exit</span></span><br><span class="line">    <span class="built_in">exit</span></span><br><span class="line">---------------------------------------------</span><br><span class="line">ALU-B&gt;config&gt;router&gt;bgp<span class="comment">#</span></span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
 
@@ -128,11 +104,16 @@
 <li><p>If the next-hop router advertised the same FEC over link-level LDP (iLDP), LDP will prefer the iLDP tunnel by default unless the user explicitly changed the default preference using the <strong>prefer-tunnel-in-tunnel</strong> command. In this case an LDPoRSVP tunnel will have precedence.</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">A:PE-1\<span class="comment"># configure router ldp prefer-tunnel-in-tunnel</span></span><br></pre></td></tr></table></figure></li>
 </ul>
+<h2 id="OSPF"><a href="#OSPF" class="headerlink" title="OSPF"></a>OSPF</h2><p>In Nokia (Alcatel-Lucent) SR OS you have only one <strong>import&#x2F;export policy</strong> per OSPF configuration. Here are their description:</p>
+<ul>
+<li><strong>Import policy</strong> is applied between route table (RIB) and OSPF database (LSDB) and <strong>import policy</strong> defines <strong>which routes will be imported from LSDB to RIB</strong>.</li>
+<li><strong>Export policy</strong> is also applies between route table (RIB) and OSPF database (LSDB) but in opposite direction. Export policy defines <strong>which routes are exported from RIB to LSDB (besides routes learned from other OSPF neighbors and routes configured by “area x.x.x.x interface Y” command)</strong>.</li>
+</ul>
 ]]></content>
   </entry>
   <entry>
-    <title>03 {时间的朋友}</title>
-    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
+    <title>02 {语录}</title>
+    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
     <content><![CDATA[]]></content>
   </entry>
   <entry>
@@ -143,6 +124,37 @@
 
 
 ]]></content>
+  </entry>
+  <entry>
+    <title>01 {Hexo+Github}</title>
+    <url>/2023/03/19/01%20%7BHexo+Github%7D/</url>
+    <content><![CDATA[<h2 id="Hexo命令集合"><a href="#Hexo命令集合" class="headerlink" title="Hexo命令集合"></a>Hexo命令集合</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo s # http://localhost:4000</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>如果hexo d报错</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;</a> # 来测试是否有权限</p>
+<p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
+<p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
+</blockquote>
+<h2 id="字体相关"><a href="#字体相关" class="headerlink" title="字体相关"></a>字体相关</h2><ol>
+<li><a href="https://marshzero.github.io/2021/12/09/Hexo%20NexT%20%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96%20%E7%B1%BBMeme/">Hexo NexT 字体美化 类Meme</a></li>
+<li></li>
+</ol>
+<h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
+<li>如何修改blockquote样式？<ol>
+<li>&#x2F;Users&#x2F;xx&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;base.styl</li>
+</ol>
+</li>
+<li></li>
+</ol>
+]]></content>
+  </entry>
+  <entry>
+    <title>03 {时间的朋友}</title>
+    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>06 {Python}</title>
