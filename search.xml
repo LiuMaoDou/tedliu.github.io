@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>03 {时间的朋友}</title>
+    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>02 {语录}</title>
+    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
     <title>04 {Nokia-ALU}</title>
     <url>/2023/03/22/04%20%7BNokia-ALU%7D/</url>
     <content><![CDATA[<h2 id="Basic"><a href="#Basic" class="headerlink" title="Basic"></a>Basic</h2><ul>
@@ -56,7 +66,10 @@
 <td align="center">170</td>
 </tr>
 </tbody></table>
-<p>- </p>
+<span id="more"></span> 
+
+
+
 <h2 id="BGP配置"><a href="#BGP配置" class="headerlink" title="BGP配置"></a>BGP配置</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Conﬁguring the AS number</span></span><br><span class="line">configure router autonomous-system 64501</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring the router ID</span></span><br><span class="line">configure router router-id 10.16.10.1</span><br><span class="line"></span><br><span class="line"><span class="comment"># Conﬁguring peer group and group parameters</span></span><br><span class="line">configure router bgp</span><br><span class="line">	group <span class="string">&quot;ibgp&quot;</span> </span><br><span class="line">		description <span class="string">&quot;AS 64501 iBGP Mesh&quot;</span> </span><br><span class="line">		peer-as 64501 </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line"><span class="built_in">exit</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># In SR OS, a router assumes the role of an RR when a Cluster-ID is configured</span></span><br><span class="line">RR1\<span class="comment"># configure router bgp</span></span><br><span class="line">  group <span class="string">&quot;ebgp&quot;</span> </span><br><span class="line">    loop-detect discard-route </span><br><span class="line">    peer-as 64501 </span><br><span class="line">    neighbor 10.0.0.1 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line">  group <span class="string">&quot;RR1_Clients&quot;</span> </span><br><span class="line">    next-hop-self </span><br><span class="line">    cluster 10.10.10.1 </span><br><span class="line">    peer-as 64500 </span><br><span class="line">    neighbor 10.16.10.5 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">    neighbor 10.16.10.6 </span><br><span class="line">    <span class="built_in">exit</span> </span><br><span class="line">  <span class="built_in">exit</span> </span><br><span class="line">  no shutdown</span><br></pre></td></tr></table></figure>
 
 <h3 id="Configuring-Route-Reflection"><a href="#Configuring-Route-Reflection" class="headerlink" title="Configuring Route Reflection"></a>Configuring Route Reflection</h3><p>Route reflection can be implemented in autonomous systems with a large internal BGP mesh to reduce the number of IBGP sessions required. One or more routers can be selected to act as focal points for internal BGP sessions. Several BGP speaking routers can peer with a route reflector. A route reflector forms peer connections to other route reflectors. <font color=Red><strong>A router assumes the role as a route reflector by configuring the cluster cluster-id command. No other command is required unless you want to disable reflection to specific peers.</strong></font><br>If you configure the cluster command at the global level, then all subordinate groups and neighbors are members of the cluster. The route reflector cluster ID is expressed in dotted- decimal notation. The ID should be a significant topology-specific value. No other command is required unless you want to disable reflection to specific peers.<br>If a route reflector client is fully meshed, the <code>disable-client-reflect</code> command can be enabled to stop the route reflector from reflecting redundant route updates to a client.<br>The following example displays route reflection configuration command usage:</p>
@@ -112,16 +125,28 @@
 ]]></content>
   </entry>
   <entry>
-    <title>02 {语录}</title>
-    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>05 {数据分析}</title>
     <url>/2023/03/23/05%20%7B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%7D/</url>
     <content><![CDATA[<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取excel</span></span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;example.xlsx&#x27;</span>, sheet_name=<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取csv</span></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;example.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印列名</span></span><br><span class="line"><span class="built_in">print</span>(data.columns)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印前几行数据和列名</span></span><br><span class="line"><span class="built_in">print</span>(data.head().to_string(index=<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;列名:&quot;</span>, <span class="built_in">list</span>(data.columns))</span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 数据透视</span></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[<span class="string">&#x27;Name&#x27;</span>], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 如何查看两列是否是一一对应关系</span></span><br><span class="line"><span class="comment"># 判断两列是否一一对应</span></span><br><span class="line">count = data.groupby([<span class="string">&#x27;ID&#x27;</span>])[<span class="string">&#x27;Name&#x27;</span>].size().reset_index(name=<span class="string">&#x27;count&#x27;</span>)</span><br><span class="line">duplicates = count[count[<span class="string">&#x27;count&#x27;</span>] &gt; <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> duplicates.empty:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列是一一对应的关系&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列不是一一对应的关系&quot;</span>)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># </span></span><br></pre></td></tr></table></figure>
 
 
+
+]]></content>
+  </entry>
+  <entry>
+    <title>06 {Python}</title>
+    <url>/2023/03/23/06%20%7BPython%7D/</url>
+    <content><![CDATA[<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标目录</span></span><br><span class="line">os.chdir(<span class="string">&quot;/path/to/desired/directory&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再次获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<span id="more"></span> 
+
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
+<li>官网：<a href="https://docs.python.org/3/library/re.html">re</a></li>
+<li>测试网站：<a href="https://regex101.com/">regex101</a></li>
+</ul>
+<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
 
 ]]></content>
   </entry>
@@ -134,12 +159,14 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;">&#103;&#105;&#x74;&#64;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#x63;&#x6f;&#109;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#x74;&#104;&#117;&#x62;&#x2e;&#99;&#111;&#x6d;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
 </blockquote>
-<h2 id="字体相关"><a href="#字体相关" class="headerlink" title="字体相关"></a>字体相关</h2><ol>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ol>
 <li><a href="https://marshzero.github.io/2021/12/09/Hexo%20NexT%20%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96%20%E7%B1%BBMeme/">Hexo NexT 字体美化 类Meme</a></li>
+<li><a href="https://blog.csdn.net/weixin_48927364/article/details/123321038">【Hexo】nexT主题使用攻略基础——添加评论功能</a></li>
+<li><a href="https://theme-next.js.org/docs/theme-settings/">Theme Settings | NexT</a></li>
 <li></li>
 </ol>
 <h2 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h2><ol>
@@ -149,26 +176,6 @@
 </li>
 <li></li>
 </ol>
-]]></content>
-  </entry>
-  <entry>
-    <title>03 {时间的朋友}</title>
-    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
-    <title>06 {Python}</title>
-    <url>/2023/03/23/06%20%7BPython%7D/</url>
-    <content><![CDATA[<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标目录</span></span><br><span class="line">os.chdir(<span class="string">&quot;/path/to/desired/directory&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再次获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
-<li>官网：<a href="https://docs.python.org/3/library/re.html">re</a></li>
-<li>测试网站：<a href="https://regex101.com/">regex101</a></li>
-</ul>
-<figure class="highlight python"><table><tr><td class="code"><pre><span class="line"></span><br></pre></td></tr></table></figure>
-
 ]]></content>
   </entry>
 </search>
