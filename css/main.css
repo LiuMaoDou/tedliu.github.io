@@ -493,7 +493,7 @@ pre {
 }
 pre,
 code {
-  font-family: 'monaco-ted', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
+  font-family: 'puhui65', consolas, Menlo, monospace, "PingFang SC", "Microsoft YaHei";
 }
 code {
   background: #eee;
@@ -1276,7 +1276,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #daab2b;
+  background: #584d91;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1603,7 +1603,7 @@ pre .javascript .function {
   opacity: 0.8;
 }
 .post-body {
-  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'puhui55', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1901,7 +1901,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'puhui55', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.7em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2823,6 +2823,16 @@ body {
   font-family: "SourceCodePro";
   font-display: swap;
   src: url("/fonts/SourceCodePro-Bold.otf.woff2");
+}
+@font-face {
+  font-family: 'puhui';
+  font-display: swap;
+  src: url("/fonts/puhui55.ttf") format("truetype");
+}
+@font-face {
+  font-family: 'puhui';
+  font-display: swap;
+  src: url("/fonts/puhui65.ttf") format("truetype");
 }
 /* 隐藏顶部线条 */
 .headband {
