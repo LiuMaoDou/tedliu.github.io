@@ -9,7 +9,7 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#x2e;&#x63;&#111;&#x6d;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;">&#103;&#105;&#116;&#x40;&#103;&#105;&#x74;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#109;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
 </blockquote>
@@ -26,7 +26,28 @@
 </li>
 <li></li>
 </ol>
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>Code字体</p>
+<p>~&#x2F;blog&#x2F;source&#x2F;_data&#x2F;styles.styl</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">@font-face &#123;</span><br><span class="line">  font-family: <span class="string">&quot;LXGW WenKai Lite&quot;</span>;</span><br><span class="line">  font-display: swap;</span><br><span class="line">  src:url(/fonts/lxgwwenkailite-regular.woff2)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_variables&#x2F;base.styl</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// Font families.</span><br><span class="line"><span class="variable">$font</span>-family-chinese      = <span class="string">&quot;PingFang SC&quot;</span>, <span class="string">&quot;Microsoft YaHei&quot;</span>;</span><br><span class="line"></span><br><span class="line"><span class="variable">$font</span>-family-base         = <span class="variable">$font</span>-family-chinese, sans-serif;</span><br><span class="line"><span class="variable">$font</span>-family-base         = get_font_family(<span class="string">&#x27;global&#x27;</span>), <span class="variable">$font</span>-family-chinese, sans-serif <span class="keyword">if</span> get_font_family(<span class="string">&#x27;global&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font</span>-family-logo         = <span class="variable">$font</span>-family-base;</span><br><span class="line"><span class="variable">$font</span>-family-logo         = get_font_family(<span class="string">&#x27;title&#x27;</span>), <span class="variable">$font</span>-family-base <span class="keyword">if</span> get_font_family(<span class="string">&#x27;title&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font</span>-family-headings     = <span class="variable">$font</span>-family-base;</span><br><span class="line"><span class="variable">$font</span>-family-headings     = get_font_family(<span class="string">&#x27;headings&#x27;</span>), <span class="variable">$font</span>-family-base <span class="keyword">if</span> get_font_family(<span class="string">&#x27;headings&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font</span>-family-posts        = <span class="variable">$font</span>-family-base;</span><br><span class="line"><span class="variable">$font</span>-family-posts        = get_font_family(<span class="string">&#x27;posts&#x27;</span>), <span class="variable">$font</span>-family-base <span class="keyword">if</span> get_font_family(<span class="string">&#x27;posts&#x27;</span>);</span><br><span class="line"></span><br><span class="line"><span class="variable">$font</span>-family-monospace    = SourceHanSansSC, puhui65, consolas, Menlo, monospace, <span class="variable">$font</span>-family-chinese;</span><br><span class="line"><span class="variable">$font</span>-family-monospace    = get_font_family(<span class="string">&#x27;codes&#x27;</span>), SourceHanSansSC, puhui65, consolas, Menlo, monospace, <span class="variable">$font</span>-family-chinese <span class="keyword">if</span> get_font_family(<span class="string">&#x27;codes&#x27;</span>);</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;_config.yml</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line">font:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span> <span class="comment"># false</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span></span><br><span class="line">  host:</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font options:</span></span><br><span class="line">  <span class="comment"># `external: true` will load this font family from `host` above.</span></span><br><span class="line">  <span class="comment"># `family: Times New Roman`. Without any quotes.</span></span><br><span class="line">  <span class="comment"># `size: x.x`. Use `em` as unit. Default: 1 (16px)</span></span><br><span class="line"></span><br><span class="line">  <span class="comment"># Global font settings used for all elements inside &lt;body&gt;.</span></span><br><span class="line">  global:</span><br><span class="line">    external: <span class="literal">false</span></span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for site title (.site-title).</span></span><br><span class="line">  title:</span><br><span class="line">    external: <span class="literal">false</span></span><br><span class="line">    family: DongFangDaKai <span class="comment">#Long Cang</span></span><br><span class="line">    size: 2.5</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span></span><br><span class="line">  headings:</span><br><span class="line">    external: <span class="literal">false</span></span><br><span class="line">    family: youai <span class="comment"># alimama # LXGW WenKai b # LXGW WenKai Lite</span></span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for posts (.post-body).</span></span><br><span class="line">  posts:</span><br><span class="line">    external: <span class="literal">false</span></span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line"></span><br><span class="line">  <span class="comment"># Font settings for &lt;code&gt; and code blocks.</span></span><br><span class="line">  codes:</span><br><span class="line">    external: <span class="literal">false</span></span><br><span class="line">    family: Menlo-ted <span class="comment"># SourceHanSansSC # puhui65, SourceCodePro # &#x27;Menlo-ted&#x27;, Monaco, &#x27;Andale Mono&#x27;, &#x27;Ubuntu Mono&#x27;, monospace # Consolas,</span></span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
 ]]></content>
+  </entry>
+  <entry>
+    <title>02 {语录}</title>
+    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>03 {时间的朋友}</title>
@@ -157,6 +178,21 @@
 ]]></content>
   </entry>
   <entry>
+    <title>06 {Python}</title>
+    <url>/2023/03/23/06%20%7BPython%7D/</url>
+    <content><![CDATA[<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标目录</span></span><br><span class="line">os.chdir(<span class="string">&quot;/path/to/desired/directory&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再次获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<span id="more"></span> 
+
+<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
+<li>官网：<a href="https://docs.python.org/3/library/re.html">re</a></li>
+<li>测试网站：<a href="https://regex101.com/">regex101</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
     <title>07 {网络技术}</title>
     <url>/2023/03/29/07%20%7B%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%7D/</url>
     <content><![CDATA[<h2 id="L2VPN"><a href="#L2VPN" class="headerlink" title="L2VPN"></a>L2VPN</h2><h3 id="VPLS"><a href="#VPLS" class="headerlink" title="VPLS"></a>VPLS</h3><p>VPLS类型：</p>
@@ -188,26 +224,11 @@
 <p>The <strong>Label Base (LB)</strong> is the first label value of a free set of labels that can be reserved by the PE router to be used for this VPLS domain.</p>
 <p><strong>VE Block Offset (VBO)</strong> is the offset value to be used when multiple label blocks must be created by a PE router. VBO is calculated with this equation: <code>VBO = RND(VE-ID/VBS) * VBS</code>(Cisco)</p>
 <p><code>Label = Label base + (Remote-site-identifier – offset)</code></p>
+<ol>
+<li><a href="https://www.cisco.com/c/en/us/support/docs/ios-nx-os-software/virtual-private-lan-services-vpls/116121-tech-vpls-bgp-00.html">VPLS with BGP Signaling Tech Note - Cisco</a></li>
+<li><a href="https://www.networkfuntimes.com/l2vpn-the-label-base-and-offset-explained/">L2VPN: THE LABEL BASE AND OFFSET, EXPLAINED! – NETWORK FUN-TIMES (networkfuntimes.com)</a></li>
+<li></li>
+</ol>
 ]]></content>
-  </entry>
-  <entry>
-    <title>06 {Python}</title>
-    <url>/2023/03/23/06%20%7BPython%7D/</url>
-    <content><![CDATA[<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标目录</span></span><br><span class="line">os.chdir(<span class="string">&quot;/path/to/desired/directory&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再次获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<span id="more"></span> 
-
-<h2 id="正则表达式"><a href="#正则表达式" class="headerlink" title="正则表达式"></a>正则表达式</h2><ul>
-<li>官网：<a href="https://docs.python.org/3/library/re.html">re</a></li>
-<li>测试网站：<a href="https://regex101.com/">regex101</a></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>02 {语录}</title>
-    <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
-    <content><![CDATA[]]></content>
   </entry>
 </search>
