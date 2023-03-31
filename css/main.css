@@ -226,7 +226,7 @@ body {
   color: var(--text-color);
   font-family: 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.2em;
-  line-height: 2;
+  line-height: 1.6;
 }
 @media (max-width: 991px) {
   body {
@@ -243,7 +243,7 @@ h6 {
   font-family: 'youai', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
-  margin: 20px 0 15px;
+  margin: 5px 0 5px;
 }
 h1 {
   font-size: 1.5em;
@@ -264,7 +264,7 @@ h6 {
   font-size: 0.875em;
 }
 p {
-  margin: 0 0 20px 0;
+  margin: 0 0 10px 0;
 }
 a,
 span.exturl {
@@ -303,6 +303,7 @@ blockquote {
   quotes: "\201C" "\201D" "\2018" "\2019";
   font-family: SourceHanSerif;
   font-size: 0.85em;
+  opacity: 0.7;
   border-radius: 6px;
 }
 blockquote p {
@@ -1277,7 +1278,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #7fb430;
+  background: #3ee90b;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -2785,6 +2786,11 @@ body {
   font-display: swap;
   src: url("/fonts/youai.woff2");
 }
+@font-face {
+  font-family: 'SourceHanSerif';
+  font-display: swap;
+  src: url("/fonts/SourceHanSerif-Medium.ttc") format("truetype-collection");
+}
 /* 隐藏顶部线条 */
 .headband {
   display: none;
@@ -2812,4 +2818,11 @@ body {
 code {
   background: #eee !important;
   font-size: 0.9em;
+}
+/**********************************************************/
+/************************ 文章 ****************************/
+/**********************************************************/
+/* 段后距 */
+p {
+  margin-bottom: 1px;
 }

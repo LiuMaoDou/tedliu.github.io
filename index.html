@@ -203,7 +203,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-30 23:35:42" itemprop="dateModified" datetime="2023-03-30T23:35:42+08:00">2023-03-30</time>
+                <time title="Modified: 2023-04-01 02:06:51" itemprop="dateModified" datetime="2023-04-01T02:06:51+08:00">2023-04-01</time>
               </span>
 
           
@@ -221,21 +221,9 @@
       
           <h2 id="L2VPN"><a href="#L2VPN" class="headerlink" title="L2VPN"></a>L2VPN</h2><h3 id="VPLS"><a href="#VPLS" class="headerlink" title="VPLS"></a>VPLS</h3><p>VPLS类型：</p>
 <ul>
-<li><p>LDP-VPLS (defined in RFC 4762) </p>
+<li><p>LDP-VPLS (defined in RFC 4762)</p>
 </li>
-<li><p>BGP-VPLS (defined in RFC 4761)</p>
-<blockquote>
-<p><strong>Draft Martini:</strong> Named after its author Luca Martini (worked for Level 3 at this time), simply uses LDP for signaling to establish point-to-point Layer 2 VPN over MPLS backbone, with no suggestion for auto-discovery. - 作废</p>
-<p><strong>Draft Kompella:</strong> Named after its author Kireeti Kompella (worked for Juniper at this time), simply uses BGP for both signaling and auto-discovery to establish multipoint (To be more specific it is fully meshed point-to-point pseudowires) Layer 2 VPN over MPLS backbone. - 作废</p>
-<p>Both drafts uses the same encapsulation; Provider’s Layer 2 header + Tunnel Label + VC Label + Control Word + Payload (L2 Frame), the encapsulation details for each Layer 2 protocol was described in several RFCs.</p>
-</blockquote>
-</li>
-<li><p>Border Gateway Protocol (BGP) Auto Discovery (<strong>RFC 6074</strong>) </p>
-<ul>
-<li>BGP AD VPLS是首先通过扩展的BGP UPDATE报文来自动发现VPLS域中的其他成员信息，然后通过LDP FEC 129信令报文来完成本地VSI与远端VSI之间自动协商建立VPLS PW的过程。</li>
-</ul>
-</li>
-</ul>
+<li><p>BGP-VPLS (defined in RFC 4761)
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2023/03/29/07%20%7B%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%7D/#more" rel="contents">
