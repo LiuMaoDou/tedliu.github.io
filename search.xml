@@ -9,7 +9,7 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#109;">&#103;&#x69;&#116;&#x40;&#x67;&#105;&#x74;&#104;&#117;&#98;&#46;&#99;&#111;&#109;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;">&#103;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#109;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p><code>ssh-agent -s</code><br><code>ssh-add ~/.ssh/id_rsa</code></p>
 </blockquote>
@@ -44,12 +44,32 @@
 <p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;base.styl</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">/* 引用样式 */</span><br><span class="line">blockquote &#123;</span><br><span class="line">    background: <span class="comment">#f9f9f9;</span></span><br><span class="line">    border-left: 10px solid <span class="comment">#ccc;</span></span><br><span class="line">    margin: 1.5em 10px;</span><br><span class="line">    padding: .5em 10px;</span><br><span class="line">    quotes: <span class="string">&quot;\201C&quot;</span><span class="string">&quot;\201D&quot;</span><span class="string">&quot;\2018&quot;</span><span class="string">&quot;\2019&quot;</span>;</span><br><span class="line">    font-size: 0.9em;</span><br><span class="line">    border-radius: 6px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
+
+
+<h3 id="优化，加载最快"><a href="#优化，加载最快" class="headerlink" title="优化，加载最快"></a>优化，加载最快</h3><ol>
+<li>字体，使用本机字体</li>
+<li></li>
+</ol>
 ]]></content>
   </entry>
   <entry>
     <title>02 {语录}</title>
     <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
     <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>03 {时间的朋友}</title>
+    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
+    <content><![CDATA[]]></content>
+  </entry>
+  <entry>
+    <title>05 {数据分析}</title>
+    <url>/2023/03/23/05%20%7B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%7D/</url>
+    <content><![CDATA[<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取excel</span></span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;example.xlsx&#x27;</span>, sheet_name=<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取csv</span></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;example.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印列名</span></span><br><span class="line"><span class="built_in">print</span>(data.columns)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印前几行数据和列名</span></span><br><span class="line"><span class="built_in">print</span>(data.head().to_string(index=<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;列名:&quot;</span>, <span class="built_in">list</span>(data.columns))</span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 数据透视</span></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[<span class="string">&#x27;Name&#x27;</span>], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 如何查看两列是否是一一对应关系</span></span><br><span class="line"><span class="comment"># 判断两列是否一一对应</span></span><br><span class="line">count = data.groupby([<span class="string">&#x27;ID&#x27;</span>])[<span class="string">&#x27;Name&#x27;</span>].size().reset_index(name=<span class="string">&#x27;count&#x27;</span>)</span><br><span class="line">duplicates = count[count[<span class="string">&#x27;count&#x27;</span>] &gt; <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> duplicates.empty:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列是一一对应的关系&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列不是一一对应的关系&quot;</span>)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># </span></span><br></pre></td></tr></table></figure>
+
+
+
+]]></content>
   </entry>
   <entry>
     <title>04 {Nokia-ALU}</title>
@@ -166,11 +186,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>03 {时间的朋友}</title>
-    <url>/2023/03/20/03%20%7B%E6%97%B6%E9%97%B4%E7%9A%84%E6%9C%8B%E5%8F%8B%7D/</url>
-    <content><![CDATA[]]></content>
-  </entry>
-  <entry>
     <title>06 {Python}</title>
     <url>/2023/03/23/06%20%7BPython%7D/</url>
     <content><![CDATA[<h2 id="文件"><a href="#文件" class="headerlink" title="文件"></a>文件</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> os</span><br><span class="line"></span><br><span class="line"><span class="comment"># 获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 切换到目标目录</span></span><br><span class="line">os.chdir(<span class="string">&quot;/path/to/desired/directory&quot;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 再次获取当前工作目录</span></span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;当前工作目录：&quot;</span>, os.getcwd())</span><br><span class="line"></span><br></pre></td></tr></table></figure>
@@ -183,15 +198,6 @@
 <li>官网：<a href="https://docs.python.org/3/library/re.html">re</a></li>
 <li>测试网站：<a href="https://regex101.com/">regex101</a></li>
 </ul>
-]]></content>
-  </entry>
-  <entry>
-    <title>05 {数据分析}</title>
-    <url>/2023/03/23/05%20%7B%E6%95%B0%E6%8D%AE%E5%88%86%E6%9E%90%7D/</url>
-    <content><![CDATA[<h2 id="Pandas"><a href="#Pandas" class="headerlink" title="Pandas"></a>Pandas</h2><figure class="highlight python"><table><tr><td class="code"><pre><span class="line"><span class="keyword">import</span> pandas <span class="keyword">as</span> pd</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取excel</span></span><br><span class="line">data = pd.read_excel(<span class="string">&#x27;example.xlsx&#x27;</span>, sheet_name=<span class="string">&#x27;Sheet1&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取csv</span></span><br><span class="line">data = pd.read_csv(<span class="string">&#x27;example.csv&#x27;</span>)</span><br><span class="line"></span><br><span class="line"><span class="built_in">print</span>(data.head())</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印列名</span></span><br><span class="line"><span class="built_in">print</span>(data.columns)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 打印前几行数据和列名</span></span><br><span class="line"><span class="built_in">print</span>(data.head().to_string(index=<span class="literal">False</span>))</span><br><span class="line"><span class="built_in">print</span>(<span class="string">&quot;列名:&quot;</span>, <span class="built_in">list</span>(data.columns))</span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 数据透视</span></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[<span class="string">&#x27;Name&#x27;</span>], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line">table = pd.pivot_table(data, values=<span class="string">&#x27;Salary&#x27;</span>, index=[<span class="string">&#x27;Gender&#x27;</span>], columns=[], aggfunc=<span class="string">&#x27;sum&#x27;</span>)</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="comment"># pandas 如何查看两列是否是一一对应关系</span></span><br><span class="line"><span class="comment"># 判断两列是否一一对应</span></span><br><span class="line">count = data.groupby([<span class="string">&#x27;ID&#x27;</span>])[<span class="string">&#x27;Name&#x27;</span>].size().reset_index(name=<span class="string">&#x27;count&#x27;</span>)</span><br><span class="line">duplicates = count[count[<span class="string">&#x27;count&#x27;</span>] &gt; <span class="number">1</span>]</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> duplicates.empty:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列是一一对应的关系&quot;</span>)</span><br><span class="line"><span class="keyword">else</span>:</span><br><span class="line">    <span class="built_in">print</span>(<span class="string">&quot;两列不是一一对应的关系&quot;</span>)</span><br><span class="line">    </span><br><span class="line"></span><br><span class="line"><span class="comment"># </span></span><br></pre></td></tr></table></figure>
-
-
-
 ]]></content>
   </entry>
   <entry>

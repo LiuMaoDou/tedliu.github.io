@@ -224,7 +224,7 @@ body {
 body {
   background: var(--body-bg-color);
   color: var(--text-color);
-  font-family: 'LXGW WenKai Lite', "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 1.2em;
   line-height: 2;
 }
@@ -240,7 +240,7 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'youai', 'LXGW WenKai Lite', "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'youai', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-weight: bold;
   line-height: 1.5;
   margin: 20px 0 15px;
@@ -494,7 +494,7 @@ pre {
 }
 pre,
 code {
-  font-family: 'Cousine', consolas, "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei";
+  font-family: 'Menlo, Consolas, LXGW WenKai Lite, monospace', Menlo, Consolas, LXGW WenKai Lite, monospace;
 }
 code {
   background: #eee;
@@ -1088,7 +1088,7 @@ pre .javascript .function {
   color: var(--brand-hover-color);
 }
 .site-title {
-  font-family: 'DongFangDaKai', 'LXGW WenKai Lite', "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'DongFangDaKai', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 2.5em;
   font-weight: normal;
   margin: 0;
@@ -1277,7 +1277,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #a8ff8c;
+  background: #7fb430;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
@@ -1604,7 +1604,7 @@ pre .javascript .function {
   opacity: 0.8;
 }
 .post-body {
-  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   overflow-wrap: break-word;
   word-wrap: break-word;
 }
@@ -1902,7 +1902,7 @@ pre .javascript .function {
 }
 .posts-expand .post-meta {
   color: #999;
-  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "LXGW WenKai Lite", "PingFang SC", "Microsoft YaHei", sans-serif;
+  font-family: 'LXGW WenKai Lite', 'LXGW WenKai Lite', "PingFang SC", "Microsoft YaHei", sans-serif;
   font-size: 0.8em;
   margin: 3px 0 60px 0;
   text-align: center;
@@ -2776,26 +2776,6 @@ body {
   src: url("/fonts/lxgwwenkailite-regular.woff2");
 }
 @font-face {
-  font-family: "Yuanti";
-  font-display: swap;
-  src: url("/fonts/Yuanti-min.woff2");
-}
-@font-face {
-  font-family: "LXGW WenKai b";
-  font-display: swap;
-  src: url("/fonts/lxgwwenkailite-bold.woff2");
-}
-@font-face {
-  font-family: "Long Cang";
-  font-display: swap;
-  src: url("/fonts/longcang-regular.woff2");
-}
-@font-face {
-  font-family: "alimama";
-  font-display: swap;
-  src: url("/fonts/Alimama_ShuHeiTi_Bold.woff2");
-}
-@font-face {
   font-family: "DongFangDaKai";
   font-display: swap;
   src: url("/fonts/Alimama_DongFangDaKai_Regular.woff2");
@@ -2804,46 +2784,6 @@ body {
   font-family: "youai";
   font-display: swap;
   src: url("/fonts/youai.woff2");
-}
-@font-face {
-  font-family: "Menlo-ted";
-  font-display: swap;
-  src: url("/fonts/Menlo-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "monaco-ted";
-  font-display: swap;
-  src: url("/fonts/monaco.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'LXGWWenKaiMono';
-  font-display: swap;
-  src: url("/fonts/LXGWWenKaiMono-Bold.ttf") format("truetype");
-}
-@font-face {
-  font-family: "SourceCodePro";
-  font-display: swap;
-  src: url("/fonts/SourceCodePro-Bold.otf.woff2");
-}
-@font-face {
-  font-family: 'Cousine';
-  font-display: swap;
-  src: url("/fonts/Cousine-Regular.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'puhui55';
-  font-display: swap;
-  src: url("/fonts/puhui55.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'puhui65';
-  font-display: swap;
-  src: url("/fonts/puhui65.ttf") format("truetype");
-}
-@font-face {
-  font-family: 'SourceHanSerif';
-  font-display: swap;
-  src: url("/fonts/SourceHanSerif-Medium.ttc") format("truetype-collection");
 }
 /* 隐藏顶部线条 */
 .headband {
