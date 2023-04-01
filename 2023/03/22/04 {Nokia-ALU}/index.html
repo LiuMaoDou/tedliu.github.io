@@ -30,7 +30,7 @@
 <meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202303261820944.png">
 <meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202303261820846.png">
 <meta property="article:published_time" content="2023-03-22T14:41:02.127Z">
-<meta property="article:modified_time" content="2023-03-28T15:19:20.721Z">
+<meta property="article:modified_time" content="2023-04-01T06:45:54.681Z">
 <meta property="article:author" content="奔跑的毛豆">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202303261820944.png">
@@ -208,7 +208,7 @@
                   <i class="far fa-calendar-check"></i>
                 </span>
                 <span class="post-meta-item-text">Edited on</span>
-                <time title="Modified: 2023-03-28 23:19:20" itemprop="dateModified" datetime="2023-03-28T23:19:20+08:00">2023-03-28</time>
+                <time title="Modified: 2023-04-01 14:45:54" itemprop="dateModified" datetime="2023-04-01T14:45:54+08:00">2023-04-01</time>
               </span>
 
           
@@ -352,6 +352,22 @@
 <li><strong>Import policy</strong> is applied between route table (RIB) and OSPF database (LSDB) and <strong>import policy</strong> defines <strong>which routes will be imported from LSDB to RIB</strong>.</li>
 <li><strong>Export policy</strong> is also applies between route table (RIB) and OSPF database (LSDB) but in opposite direction. Export policy defines <strong>which routes are exported from RIB to LSDB (besides routes learned from other OSPF neighbors and routes configured by “area x.x.x.x interface Y” command)</strong>.</li>
 </ul>
+<h2 id="Interface"><a href="#Interface" class="headerlink" title="Interface"></a>Interface</h2><ul>
+<li><p>Router ports must be configured as either access, hybrid, or network. The default is network.</p>
+<ul>
+<li><p>access - Access ports are configured for customer facing traffic on which services are configured. If a Service Access Port (SAP) is to be configured on the port or channel, it must be configured as an access port or channel. When a port is configured for access mode, the appropriate encapsulation type must be configured to distinguish the services on the port or channel. After a port has been configured for access mode, one or more services can be configured on the port or channel depending on the encapsulation value. </p>
+<div class="note default">
+            <p>A physical port needs to be configured as access mode before it can be associated with any SAPs in service instances. </p>
+          </div>
+</li>
+<li><p>network - Network ports are configured for network-facing traffic. These ports participate in the service provider transport or infrastructure network. Dot1q is supported on network ports.</p>
+</li>
+<li><p>hybrid - Hybrid ports are configured for access and network-facing traffic. While the default mode of an Ethernet port remains network, the mode of a port cannot be changed between the access, network, and hybrid values unless the port is shut down and the configured SAPs or interfaces are deleted.</p>
+</li>
+<li></li>
+</ul>
+</li>
+</ul>
 
     </div>
 
@@ -447,7 +463,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic"><span class="nav-number">1.</span> <span class="nav-text">Basic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BGP%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">BGP配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-Route-Reflection"><span class="nav-number">2.1.</span> <span class="nav-text">Configuring Route Reflection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LDP-over-RSVP"><span class="nav-number">3.</span> <span class="nav-text">LDP over RSVP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Base"><span class="nav-number">3.1.</span> <span class="nav-text">Base</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nokia"><span class="nav-number">3.2.</span> <span class="nav-text">Nokia</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSPF"><span class="nav-number">4.</span> <span class="nav-text">OSPF</span></a></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Basic"><span class="nav-number">1.</span> <span class="nav-text">Basic</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#BGP%E9%85%8D%E7%BD%AE"><span class="nav-number">2.</span> <span class="nav-text">BGP配置</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Configuring-Route-Reflection"><span class="nav-number">2.1.</span> <span class="nav-text">Configuring Route Reflection</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#LDP-over-RSVP"><span class="nav-number">3.</span> <span class="nav-text">LDP over RSVP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#Base"><span class="nav-number">3.1.</span> <span class="nav-text">Base</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Nokia"><span class="nav-number">3.2.</span> <span class="nav-text">Nokia</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#OSPF"><span class="nav-number">4.</span> <span class="nav-text">OSPF</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Interface"><span class="nav-number">5.</span> <span class="nav-text">Interface</span></a></li></ol></div>
       </div>
       <!--/noindex-->
 
