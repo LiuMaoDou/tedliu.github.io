@@ -1,59 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
-    <title>01 {Web}</title>
-    <url>/2023/03/19/01%20%7BWeb%7D/</url>
-    <content><![CDATA[<h2 id="Hexo命令集合"><a href="#Hexo命令集合" class="headerlink" title="Hexo命令集合"></a>Hexo命令集合</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo s # http://localhost:4000</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
-
-
-
-<blockquote>
-<p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;">&#x67;&#105;&#x74;&#x40;&#x67;&#x69;&#116;&#104;&#x75;&#98;&#x2e;&#99;&#x6f;&#x6d;</a> # 来测试是否有权限</p>
-<p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
-</blockquote>
-<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ol>
-<li><a href="https://marshzero.github.io/2021/12/09/Hexo%20NexT%20%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96%20%E7%B1%BBMeme/">Hexo NexT 字体美化 类Meme</a></li>
-<li><a href="https://blog.csdn.net/weixin_48927364/article/details/123321038">【Hexo】nexT主题使用攻略基础——添加评论功能</a></li>
-<li><a href="https://theme-next.js.org/docs/theme-settings/">Theme Settings | NexT</a></li>
-<li><a href="https://benn314.github.io/2022/11/22/Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/#%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">Hexo-Next主题配置教程</a></li>
-<li><a href="https://zenreal.github.io/posts/44730/">最新 Hexo NexT v7.4.1 主題優化 | 雲沐居 (zenreal.github.io)</a></li>
-<li></li>
-</ol>
-<span id="more"></span> 
-
-<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>~&#x2F;blog&#x2F;source&#x2F;_data&#x2F;styles.styl</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;LXGW WenKai Lite&quot;</span>;</span><br><span class="line">  <span class="attribute">font-display</span>: swap;</span><br><span class="line">  <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">/fonts/lxgwwenkailite-regular.woff2</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_variables&#x2F;base.styl</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="attribute">Font</span> families.</span><br><span class="line">$<span class="attribute">font-family</span>-chinese      = &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;;</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-base         = $<span class="attribute">font-family</span>-chinese, sans-serif;</span><br><span class="line">$<span class="attribute">font-family</span>-base         = get_font_family(&#x27;global&#x27;), $<span class="attribute">font-family</span>-chinese, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-logo         = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-logo         = get_font_family(&#x27;title&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-headings     = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-headings     = get_font_family(&#x27;headings&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-posts        = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-posts        = get_font_family(&#x27;posts&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese;</span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = get_font_family(&#x27;codes&#x27;), SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese if get_font_family(&#x27;codes&#x27;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// <span class="attribute">Font</span> size</span><br><span class="line">$<span class="attribute">font-size</span>-base           =  <span class="number">1.2em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smallest       = .<span class="number">7em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smaller        = .<span class="number">75em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-small          = .<span class="number">9em</span>; # 修改代码块字体</span><br><span class="line">$<span class="attribute">font-size</span>-medium         = <span class="number">1em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-large          = <span class="number">1.125em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-larger         = <span class="number">1.25em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-largest        = <span class="number">1.5em</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;_config.yml</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attribute">font</span>:</span><br><span class="line">  enable: true # false</span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span><br><span class="line">  host:</span><br><span class="line"></span><br><span class="line">  # Font options:</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: x.x`. Use `em` as unit. Default: <span class="number">1</span> (<span class="number">16px</span>)</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements inside &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: false</span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for site title (.site-title).</span><br><span class="line">  title:</span><br><span class="line">    external: false</span><br><span class="line">    family: DongFangDaKai #Long Cang</span><br><span class="line">    size: <span class="number">2.5</span></span><br><span class="line"></span><br><span class="line">  # Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span><br><span class="line">  headings:</span><br><span class="line">    external: false</span><br><span class="line">    family: youai # alimama # LXGW WenKai b # LXGW WenKai Lite</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts (.post-body).</span><br><span class="line">  posts:</span><br><span class="line">    external: false</span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: false</span><br><span class="line">    family: Menlo-ted # SourceHanSansSC # puhui65, SourceCodePro # <span class="string">&#x27;Menlo-ted&#x27;</span>, Monaco, <span class="string">&#x27;Andale Mono&#x27;</span>, <span class="string">&#x27;Ubuntu Mono&#x27;</span>, monospace # Consolas,</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;base.styl</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 引用样式 */</span></span><br><span class="line"><span class="selector-tag">blockquote</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f9f9f9</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">10px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">1.5em</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">5em</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">quotes</span>: <span class="string">&quot;\201C&quot;</span><span class="string">&quot;\201D&quot;</span><span class="string">&quot;\2018&quot;</span><span class="string">&quot;\2019&quot;</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 字体颜色 */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 字体透明度 */</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-
-<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><ul>
-<li>博客分类</li>
-</ul>
-<p>​	<a href="https://juejin.cn/post/6921750181297782798">Hexo添加分类及标签（在Next主题下） - 掘金 (juejin.cn)</a></p>
-<p>- </p>
-]]></content>
-  </entry>
-  <entry>
     <title>02 {语录}</title>
     <url>/2023/03/20/02%20%7B%E8%AF%AD%E5%BD%95%7D/</url>
     <content><![CDATA[]]></content>
@@ -222,14 +169,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>08 {2023}</title>
-    <url>/2023/04/02/08%20%7B2023%7D/</url>
-    <content><![CDATA[<h2 id="4月"><a href="#4月" class="headerlink" title="4月"></a>4月</h2><h3 id="2日"><a href="#2日" class="headerlink" title="2日"></a>2日</h3><ul>
-<li><h2 id="github-blog-如何加速国内访问？"><a href="#github-blog-如何加速国内访问？" class="headerlink" title="github blog 如何加速国内访问？"></a>github blog 如何加速国内访问？</h2></li>
-</ul>
-]]></content>
-  </entry>
-  <entry>
     <title>07 {网络技术}</title>
     <url>/2023/03/29/07%20%7B%E7%BD%91%E7%BB%9C%E6%8A%80%E6%9C%AF%7D/</url>
     <content><![CDATA[<h2 id="L2VPN"><a href="#L2VPN" class="headerlink" title="L2VPN"></a>L2VPN</h2><h3 id="VPLS"><a href="#VPLS" class="headerlink" title="VPLS"></a>VPLS</h3><p>VPLS类型：</p>
@@ -267,6 +206,11 @@
 <li></li>
 </ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>08 {知识管理实践}</title>
+    <url>/2023/04/02/08%20%7B%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86%E5%AE%9E%E8%B7%B5%7D/</url>
+    <content><![CDATA[]]></content>
   </entry>
   <entry>
     <title>09 {BGP网络安全}</title>
@@ -313,5 +257,85 @@
       <tags>
         <tag>网络技术</tag>
       </tags>
+  </entry>
+  <entry>
+    <title>10 {L2VPN}</title>
+    <url>/2023/04/09/10%20%7BL2VPN%7D/</url>
+    <content><![CDATA[<h2 id="Virtual-Private-LAN-Service-VPLS"><a href="#Virtual-Private-LAN-Service-VPLS" class="headerlink" title="Virtual Private LAN Service (VPLS)"></a>Virtual Private LAN Service (VPLS)</h2><ul>
+<li><p><a href="https://www.rfc-editor.org/rfc/rfc4664">RFC 4664: Framework for Layer 2 Virtual Private Networks (L2VPNs)</a></p>
+</li>
+<li><p><a href="https://www.rfc-editor.org/rfc/rfc4761">RFC 4761: Virtual Private LAN Service (VPLS) Using BGP for Auto-Discovery and Signaling</a></p>
+</li>
+<li><p><a href="https://www.rfc-editor.org/rfc/rfc4762">RFC 4762: Virtual Private LAN Service (VPLS) Using Label Distribution Protocol (LDP) Signaling</a></p>
+</li>
+</ul>
+<h2 id="Ethernet-VPN-EVPN"><a href="#Ethernet-VPN-EVPN" class="headerlink" title="Ethernet VPN (EVPN)"></a>Ethernet VPN (EVPN)</h2><ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc7209">RFC 7209: Requirements for Ethernet VPN (EVPN)</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc7432.html">RFC 7432: BGP MPLS-Based Ethernet VPN</a></li>
+</ul>
+<h3 id="传统VPLS的问题"><a href="#传统VPLS的问题" class="headerlink" title="传统VPLS的问题"></a>传统VPLS的问题</h3><blockquote>
+<p>However, the existing solution has a number of limitations when it comes to multihoming and redundancy, multicast optimization, provisioning simplicity, flow-based load balancing, and multipathing; these limitations are important considerations for Data Center (DC) deployments. – RFC7432</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网络技术</category>
+      </categories>
+      <tags>
+        <tag>网络技术</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>01 {Web}</title>
+    <url>/2023/03/19/01%20%7BWeb%7D/</url>
+    <content><![CDATA[<h2 id="Hexo命令集合"><a href="#Hexo命令集合" class="headerlink" title="Hexo命令集合"></a>Hexo命令集合</h2><figure class="highlight plaintext"><table><tr><td class="code"><pre><span class="line">cd blog</span><br><span class="line">hexo clean</span><br><span class="line">hexo s # http://localhost:4000</span><br><span class="line">hexo g</span><br><span class="line">hexo d</span><br></pre></td></tr></table></figure>
+
+
+
+<blockquote>
+<p>如果hexo d报错</p>
+<p>ssh -T <a href="mailto:&#103;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;">&#103;&#x69;&#x74;&#64;&#103;&#x69;&#116;&#x68;&#117;&#x62;&#46;&#x63;&#x6f;&#x6d;</a> # 来测试是否有权限</p>
+<p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
+<p>ssh-agent -s<br>ssh-add ~&#x2F;.ssh&#x2F;id_rsa </p>
+</blockquote>
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ol>
+<li><a href="https://marshzero.github.io/2021/12/09/Hexo%20NexT%20%E5%AD%97%E4%BD%93%E7%BE%8E%E5%8C%96%20%E7%B1%BBMeme/">Hexo NexT 字体美化 类Meme</a></li>
+<li><a href="https://blog.csdn.net/weixin_48927364/article/details/123321038">【Hexo】nexT主题使用攻略基础——添加评论功能</a></li>
+<li><a href="https://theme-next.js.org/docs/theme-settings/">Theme Settings | NexT</a></li>
+<li><a href="https://benn314.github.io/2022/11/22/Hexo-Next%E4%B8%BB%E9%A2%98%E9%85%8D%E7%BD%AE%E6%95%99%E7%A8%8B/#%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2">Hexo-Next主题配置教程</a></li>
+<li><a href="https://zenreal.github.io/posts/44730/">最新 Hexo NexT v7.4.1 主題優化 | 雲沐居 (zenreal.github.io)</a></li>
+<li></li>
+</ol>
+<span id="more"></span> 
+
+<h3 id="字体"><a href="#字体" class="headerlink" title="字体"></a>字体</h3><p>~&#x2F;blog&#x2F;source&#x2F;_data&#x2F;styles.styl</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="keyword">@font-face</span> &#123;</span><br><span class="line">  <span class="attribute">font-family</span>: <span class="string">&quot;LXGW WenKai Lite&quot;</span>;</span><br><span class="line">  <span class="attribute">font-display</span>: swap;</span><br><span class="line">  <span class="attribute">src</span>:<span class="built_in">url</span>(<span class="string">/fonts/lxgwwenkailite-regular.woff2</span>)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_variables&#x2F;base.styl</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="attribute">Font</span> families.</span><br><span class="line">$<span class="attribute">font-family</span>-chinese      = &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;;</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-base         = $<span class="attribute">font-family</span>-chinese, sans-serif;</span><br><span class="line">$<span class="attribute">font-family</span>-base         = get_font_family(&#x27;global&#x27;), $<span class="attribute">font-family</span>-chinese, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-logo         = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-logo         = get_font_family(&#x27;title&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-headings     = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-headings     = get_font_family(&#x27;headings&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-posts        = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-posts        = get_font_family(&#x27;posts&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese;</span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = get_font_family(&#x27;codes&#x27;), SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese if get_font_family(&#x27;codes&#x27;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// <span class="attribute">Font</span> size</span><br><span class="line">$<span class="attribute">font-size</span>-base           =  <span class="number">1.2em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smallest       = .<span class="number">7em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smaller        = .<span class="number">75em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-small          = .<span class="number">9em</span>; # 修改代码块字体</span><br><span class="line">$<span class="attribute">font-size</span>-medium         = <span class="number">1em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-large          = <span class="number">1.125em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-larger         = <span class="number">1.25em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-largest        = <span class="number">1.5em</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;_config.yml</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"></span><br><span class="line"><span class="attribute">font</span>:</span><br><span class="line">  enable: true # false</span><br><span class="line"></span><br><span class="line">  # Uri of fonts host, e.g. https://fonts.googleapis.com (Default).</span><br><span class="line">  host:</span><br><span class="line"></span><br><span class="line">  # Font options:</span><br><span class="line">  # `external: true` will load this font family from `host` above.</span><br><span class="line">  # `family: Times New Roman`. Without any quotes.</span><br><span class="line">  # `size: x.x`. Use `em` as unit. Default: <span class="number">1</span> (<span class="number">16px</span>)</span><br><span class="line"></span><br><span class="line">  # Global font settings used for all elements inside &lt;body&gt;.</span><br><span class="line">  global:</span><br><span class="line">    external: false</span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for site title (.site-title).</span><br><span class="line">  title:</span><br><span class="line">    external: false</span><br><span class="line">    family: DongFangDaKai #Long Cang</span><br><span class="line">    size: <span class="number">2.5</span></span><br><span class="line"></span><br><span class="line">  # Font settings for headlines (&lt;h1&gt; to &lt;h6&gt;).</span><br><span class="line">  headings:</span><br><span class="line">    external: false</span><br><span class="line">    family: youai # alimama # LXGW WenKai b # LXGW WenKai Lite</span><br><span class="line">    size:</span><br><span class="line"></span><br><span class="line">  # Font settings for posts (.post-body).</span><br><span class="line">  posts:</span><br><span class="line">    external: false</span><br><span class="line">    family: LXGW WenKai Lite</span><br><span class="line"></span><br><span class="line">  # Font settings for &lt;code&gt; and code blocks.</span><br><span class="line">  codes:</span><br><span class="line">    external: false</span><br><span class="line">    family: Menlo-ted # SourceHanSansSC # puhui65, SourceCodePro # <span class="string">&#x27;Menlo-ted&#x27;</span>, Monaco, <span class="string">&#x27;Andale Mono&#x27;</span>, <span class="string">&#x27;Ubuntu Mono&#x27;</span>, monospace # Consolas,</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;base.styl</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 引用样式 */</span></span><br><span class="line"><span class="selector-tag">blockquote</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#f9f9f9</span>;</span><br><span class="line">    <span class="attribute">border-left</span>: <span class="number">10px</span> solid <span class="number">#ccc</span>;</span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">1.5em</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">padding</span>: .<span class="number">5em</span> <span class="number">10px</span>;</span><br><span class="line">    <span class="attribute">quotes</span>: <span class="string">&quot;\201C&quot;</span><span class="string">&quot;\201D&quot;</span><span class="string">&quot;\2018&quot;</span><span class="string">&quot;\2019&quot;</span>;</span><br><span class="line">    <span class="attribute">font-size</span>: <span class="number">0.9em</span>;</span><br><span class="line">    <span class="attribute">border-radius</span>: <span class="number">6px</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 字体颜色 */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 字体透明度 */</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="Hexo"><a href="#Hexo" class="headerlink" title="Hexo"></a>Hexo</h2><ul>
+<li>博客分类</li>
+</ul>
+<p>​	<a href="https://juejin.cn/post/6921750181297782798">Hexo添加分类及标签（在Next主题下） - 掘金 (juejin.cn)</a></p>
+<p>- </p>
+]]></content>
   </entry>
 </search>
