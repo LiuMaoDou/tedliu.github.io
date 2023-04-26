@@ -9,7 +9,7 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;">&#x67;&#x69;&#116;&#x40;&#x67;&#105;&#116;&#104;&#x75;&#98;&#x2e;&#x63;&#x6f;&#109;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p>ssh-agent -s<br>ssh-add ~&#x2F;.ssh&#x2F;id_rsa </p>
 </blockquote>
@@ -51,7 +51,36 @@
 <li>博客分类</li>
 </ul>
 <p>​	<a href="https://juejin.cn/post/6921750181297782798">Hexo添加分类及标签（在Next主题下） - 掘金 (juejin.cn)</a></p>
-<p>- </p>
+<ul>
+<li>codeblock<ul>
+<li>highlight.styl</li>
+</ul>
+</li>
+<li><a href="https://theme-next.js.org/">NexT - Theme for Hexo (theme-next.js.org)</a></li>
+<li><a href="https://chenwenjia1991.github.io/2019/06/03/Hexo-NexT-%E5%8D%9A%E5%AE%A2-note-%E4%B8%8E-tab-%E4%BD%BF%E7%94%A8/">Hexo-NexT 博客 note 与 tab 使用</a></li>
+<li><a href="https://io-oi.me/tech/hexo-next-optimization/">打造个性超赞博客 Hexo + NexT + GitHub Pages 的超深度优化</a></li>
+<li></li>
+</ul>
+<h3 id="Note语法"><a href="#Note语法" class="headerlink" title="Note语法"></a>Note语法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% note [class] [no-icon] [summary] %&#125;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&#123;% endnote %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>[class]</code> : <em>Optional parameter.</em> Supported values: default | primary | success | info | warning | danger.</li>
+<li><code>[no-icon]</code> : <em>Optional parameter.</em> Disable icon in note.</li>
+<li><code>[summary]</code> : <em>Optional parameter.</em> Optional summary of the note.</li>
+</ul>
+<h3 id="Tab语法"><a href="#Tab语法" class="headerlink" title="Tab语法"></a>Tab语法</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% tabs Unique name, [index] %&#125;</span><br><span class="line">&lt;!-- tab [Tab caption] [@icon] --&gt;</span><br><span class="line">Any content (support inline tags too).</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li><code>Unique name</code> 表示标签块标签（ tabs block tag）；</li>
+<li><code>index</code> 表示起始显示标签页，和 <code>Unique name</code> 用逗号隔开；</li>
+<li><code>Tab caption</code> 表示标签页名；</li>
+<li><code>icon</code> 表示 <a href="https://fontawesome.com/icons?d=gallery">FontAwesome</a> 符号，以 <code>@</code> 开始，和 <code>Tab caption</code> 用空格隔开；</li>
+<li>每一对 <code>tabs</code> 和 <code>endtabs</code> 之间表示一个标签块；每一对 <code>&lt;!-- tab --&gt;</code> 和 <code>&lt;!-- endtab --&gt;</code> 之间表示一个标签页，每个标签块可以有多个标签页；</li>
+<li>标签块名需不一致，否则影响实现。</li>
+</ul>
+<p>示列:</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;% tabs 测试 %&#125;</span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 1.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 2.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line"></span><br><span class="line">&lt;!-- tab --&gt;</span><br><span class="line">**This is Tab 3.**</span><br><span class="line">&lt;!-- endtab --&gt;</span><br><span class="line">&#123;% endtabs %&#125;</span><br></pre></td></tr></table></figure>
+
 ]]></content>
   </entry>
   <entry>
@@ -274,11 +303,123 @@
 </ul>
 <h2 id="Ethernet-VPN-EVPN"><a href="#Ethernet-VPN-EVPN" class="headerlink" title="Ethernet VPN (EVPN)"></a>Ethernet VPN (EVPN)</h2><ul>
 <li><a href="https://www.rfc-editor.org/rfc/rfc7209">RFC 7209: Requirements for Ethernet VPN (EVPN)</a></li>
-<li><a href="https://www.rfc-editor.org/rfc/rfc7432.html">RFC 7432: BGP MPLS-Based Ethernet VPN</a></li>
+<li><a href="https://datatracker.ietf.org/doc/html/rfc7432">RFC 7432: BGP MPLS-Based Ethernet VPN</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc8584">RFC 8584: Framework for Ethernet VPN Designated Forwarder Election Extensibility</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9136.html">RFC 9136: IP Prefix Advertisement in Ethernet VPN (EVPN)</a></li>
+<li><a href="https://www.rfc-editor.org/rfc/rfc9161">RFC 9161: Operational Aspects of Proxy ARP&#x2F;ND in Ethernet Virtual Private Networks</a></li>
 </ul>
-<h3 id="传统VPLS的问题"><a href="#传统VPLS的问题" class="headerlink" title="传统VPLS的问题"></a>传统VPLS的问题</h3><blockquote>
-<p>However, the existing solution has a number of limitations when it comes to multihoming and redundancy, multicast optimization, provisioning simplicity, flow-based load balancing, and multipathing; these limitations are important considerations for Data Center (DC) deployments. – RFC7432</p>
-</blockquote>
+<span id="more"></span> 
+
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ul>
+<li><p>Aliasing and Backup Path</p>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.4">RFC7432</a></li>
+<li>Ethernet A-D route per EVI route, is used to implement the Aliasing and Backup Path features of EVPN associated with active-active multi-homing.</li>
+</ul>
+</li>
+<li><p>Split Horizon</p>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.3">RFC7432</a></li>
+<li>ESI label</li>
+</ul>
+</li>
+<li><p>MAC Mass-Withdraw（Fast Convergence）</p>
+<ul>
+<li><a href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.2">RFC7432</a></li>
+<li>Ethernet A-D per ES routes</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h3 id="EVPN-Service-Models"><a href="#EVPN-Service-Models" class="headerlink" title="EVPN Service Models"></a>EVPN Service Models</h3><h4 id="VLAN-Based-Service-Interface"><a href="#VLAN-Based-Service-Interface" class="headerlink" title="VLAN Based Service Interface"></a>VLAN Based Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248855.png" alt="img"></p>
+<ul>
+<li>one-to-one mapping between the VLAN-ID and the MAC-VRF of the EVPN instance</li>
+</ul>
+<h4 id="VLAN-Bundle-Service-Interface"><a href="#VLAN-Bundle-Service-Interface" class="headerlink" title="VLAN Bundle Service Interface"></a>VLAN Bundle Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248816.png" alt="img"></p>
+<ul>
+<li>many-to-one mapping between the VLAN-IDs and the MAC-VRF of the EVPN instance</li>
+</ul>
+<div class="note info">
+            <p>MAC addresses must be unique across all associated vlans.</p>
+          </div>
+
+
+
+<h4 id="VLAN-Aware-Bundle-Service-Interface"><a href="#VLAN-Aware-Bundle-Service-Interface" class="headerlink" title="VLAN Aware Bundle Service Interface"></a>VLAN Aware Bundle Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221249004.png" alt="img"></p>
+<ul>
+<li>many-to-one mapping between the VLAN-IDs and the MAC-VRF of the EVPN instance</li>
+<li>However, the MAC-VRF contains a unique Layer 2 bridge table for each associated VLAN-ID and a unique VNI label for each bridge domain.</li>
+</ul>
+<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><h4 id="1-RT-1-Per-EVI-Ethernet-Auto-Discovery作用？"><a href="#1-RT-1-Per-EVI-Ethernet-Auto-Discovery作用？" class="headerlink" title="1. RT-1 Per EVI Ethernet Auto-Discovery作用？"></a>1. RT-1 Per EVI Ethernet Auto-Discovery作用？</h4><ul>
+<li>AD路由：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">+---------------------------------------+</span><br><span class="line">|  Route Distinguisher (RD) (8 octets)  |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|Ethernet Segment Identifier (10 octets)|</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|  Ethernet Tag ID (4 octets)           |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|  MPLS Label (3 octets)                |</span><br><span class="line">+---------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对比：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Ethernet A-D per ES Route</th>
+<th>Ethernet A-D per EVI Route</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>RD</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>ESI</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>Ethernet Tag ID</td>
+<td>MAX-ET</td>
+<td>有值</td>
+</tr>
+<tr>
+<td></td>
+<td>MPLS label</td>
+<td>0</td>
+<td>有值（Aliasing &amp; Backup Path）</td>
+</tr>
+<tr>
+<td></td>
+<td>Next Hop</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>Route Target</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td>ESI  Label</td>
+<td>Single-Active bit</td>
+<td>有值<br />- 0：All-Active<br />- 1：Single-Active</td>
+<td>N&#x2F;A</td>
+</tr>
+<tr>
+<td>ESI  Label</td>
+<td>MPLS label</td>
+<td>有值（水平分割）</td>
+<td>N&#x2F;A</td>
+</tr>
+</tbody></table>
+<ul>
+<li>示列：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221221154.png" alt="image-20230422122114855"></p>
 ]]></content>
       <categories>
         <category>网络技术</category>
@@ -336,6 +477,15 @@
   <entry>
     <title>02 {佳软}</title>
     <url>/2023/03/20/02%20%7B%E4%BD%B3%E8%BD%AF%7D/</url>
+    <content><![CDATA[<h2 id="Logseq"><a href="#Logseq" class="headerlink" title="Logseq"></a>Logseq</h2><ul>
+<li><a href="https://hub.logseq.com/">Logseq Community Hub</a></li>
+<li></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>11 {英语}</title>
+    <url>/2023/04/15/11%20%7B%E8%8B%B1%E8%AF%AD%7D/</url>
     <content><![CDATA[]]></content>
   </entry>
 </search>

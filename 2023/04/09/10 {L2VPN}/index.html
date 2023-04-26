@@ -27,11 +27,16 @@
 <meta property="og:site_name" content="知无涯">
 <meta property="og:description" content="Virtual Private LAN Service (VPLS) RFC 4664: Framework for Layer 2 Virtual Private Networks (L2VPNs)  RFC 4761: Virtual Private LAN Service (VPLS) Using BGP for Auto-Discovery and Signaling  RFC 4762:">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248855.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248816.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221249004.png">
+<meta property="og:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221221154.png">
 <meta property="article:published_time" content="2023-04-09T05:52:38.559Z">
-<meta property="article:modified_time" content="2023-04-09T06:06:12.992Z">
+<meta property="article:modified_time" content="2023-04-22T05:11:01.236Z">
 <meta property="article:author" content="奔跑的毛豆">
 <meta property="article:tag" content="网络技术">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248855.png">
 
 <link rel="canonical" href="http://example.com/2023/04/09/10%20%7BL2VPN%7D/">
 
@@ -208,10 +213,16 @@
                 <i class="far fa-calendar"></i>
               </span>
               <span class="post-meta-item-text">Posted on</span>
-              
 
-              <time title="Created: 2023-04-09 13:52:38 / Modified: 14:06:12" itemprop="dateCreated datePublished" datetime="2023-04-09T13:52:38+08:00">2023-04-09</time>
+              <time title="Created: 2023-04-09 13:52:38" itemprop="dateCreated datePublished" datetime="2023-04-09T13:52:38+08:00">2023-04-09</time>
             </span>
+              <span class="post-meta-item">
+                <span class="post-meta-item-icon">
+                  <i class="far fa-calendar-check"></i>
+                </span>
+                <span class="post-meta-item-text">Edited on</span>
+                <time title="Modified: 2023-04-22 13:11:01" itemprop="dateModified" datetime="2023-04-22T13:11:01+08:00">2023-04-22</time>
+              </span>
             <span class="post-meta-item">
               <span class="post-meta-item-icon">
                 <i class="far fa-folder"></i>
@@ -264,11 +275,123 @@
 </ul>
 <h2 id="Ethernet-VPN-EVPN"><a href="#Ethernet-VPN-EVPN" class="headerlink" title="Ethernet VPN (EVPN)"></a>Ethernet VPN (EVPN)</h2><ul>
 <li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7209">RFC 7209: Requirements for Ethernet VPN (EVPN)</a></li>
-<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7432.html">RFC 7432: BGP MPLS-Based Ethernet VPN</a></li>
+<li><a target="_blank" rel="noopener" href="https://datatracker.ietf.org/doc/html/rfc7432">RFC 7432: BGP MPLS-Based Ethernet VPN</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc8584">RFC 8584: Framework for Ethernet VPN Designated Forwarder Election Extensibility</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc9136.html">RFC 9136: IP Prefix Advertisement in Ethernet VPN (EVPN)</a></li>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc9161">RFC 9161: Operational Aspects of Proxy ARP&#x2F;ND in Ethernet Virtual Private Networks</a></li>
 </ul>
-<h3 id="传统VPLS的问题"><a href="#传统VPLS的问题" class="headerlink" title="传统VPLS的问题"></a>传统VPLS的问题</h3><blockquote>
-<p>However, the existing solution has a number of limitations when it comes to multihoming and redundancy, multicast optimization, provisioning simplicity, flow-based load balancing, and multipathing; these limitations are important considerations for Data Center (DC) deployments. – RFC7432</p>
-</blockquote>
+<span id="more"></span> 
+
+<h3 id="功能"><a href="#功能" class="headerlink" title="功能"></a>功能</h3><ul>
+<li><p>Aliasing and Backup Path</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.4">RFC7432</a></li>
+<li>Ethernet A-D route per EVI route, is used to implement the Aliasing and Backup Path features of EVPN associated with active-active multi-homing.</li>
+</ul>
+</li>
+<li><p>Split Horizon</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.3">RFC7432</a></li>
+<li>ESI label</li>
+</ul>
+</li>
+<li><p>MAC Mass-Withdraw（Fast Convergence）</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://www.rfc-editor.org/rfc/rfc7432.html#section-8.2">RFC7432</a></li>
+<li>Ethernet A-D per ES routes</li>
+</ul>
+</li>
+<li></li>
+</ul>
+<h3 id="EVPN-Service-Models"><a href="#EVPN-Service-Models" class="headerlink" title="EVPN Service Models"></a>EVPN Service Models</h3><h4 id="VLAN-Based-Service-Interface"><a href="#VLAN-Based-Service-Interface" class="headerlink" title="VLAN Based Service Interface"></a>VLAN Based Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248855.png" alt="img"></p>
+<ul>
+<li>one-to-one mapping between the VLAN-ID and the MAC-VRF of the EVPN instance</li>
+</ul>
+<h4 id="VLAN-Bundle-Service-Interface"><a href="#VLAN-Bundle-Service-Interface" class="headerlink" title="VLAN Bundle Service Interface"></a>VLAN Bundle Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221248816.png" alt="img"></p>
+<ul>
+<li>many-to-one mapping between the VLAN-IDs and the MAC-VRF of the EVPN instance</li>
+</ul>
+<div class="note info">
+            <p>MAC addresses must be unique across all associated vlans.</p>
+          </div>
+
+
+
+<h4 id="VLAN-Aware-Bundle-Service-Interface"><a href="#VLAN-Aware-Bundle-Service-Interface" class="headerlink" title="VLAN Aware Bundle Service Interface"></a>VLAN Aware Bundle Service Interface</h4><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221249004.png" alt="img"></p>
+<ul>
+<li>many-to-one mapping between the VLAN-IDs and the MAC-VRF of the EVPN instance</li>
+<li>However, the MAC-VRF contains a unique Layer 2 bridge table for each associated VLAN-ID and a unique VNI label for each bridge domain.</li>
+</ul>
+<h3 id="疑问"><a href="#疑问" class="headerlink" title="疑问"></a>疑问</h3><h4 id="1-RT-1-Per-EVI-Ethernet-Auto-Discovery作用？"><a href="#1-RT-1-Per-EVI-Ethernet-Auto-Discovery作用？" class="headerlink" title="1. RT-1 Per EVI Ethernet Auto-Discovery作用？"></a>1. RT-1 Per EVI Ethernet Auto-Discovery作用？</h4><ul>
+<li>AD路由：</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">+---------------------------------------+</span><br><span class="line">|  Route Distinguisher (RD) (8 octets)  |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|Ethernet Segment Identifier (10 octets)|</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|  Ethernet Tag ID (4 octets)           |</span><br><span class="line">+---------------------------------------+</span><br><span class="line">|  MPLS Label (3 octets)                |</span><br><span class="line">+---------------------------------------+</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>对比：</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th></th>
+<th></th>
+<th>Ethernet A-D per ES Route</th>
+<th>Ethernet A-D per EVI Route</th>
+</tr>
+</thead>
+<tbody><tr>
+<td></td>
+<td>RD</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>ESI</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>Ethernet Tag ID</td>
+<td>MAX-ET</td>
+<td>有值</td>
+</tr>
+<tr>
+<td></td>
+<td>MPLS label</td>
+<td>0</td>
+<td>有值（Aliasing &amp; Backup Path）</td>
+</tr>
+<tr>
+<td></td>
+<td>Next Hop</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td></td>
+<td>Route Target</td>
+<td>一样</td>
+<td>一样</td>
+</tr>
+<tr>
+<td>ESI  Label</td>
+<td>Single-Active bit</td>
+<td>有值<br />- 0：All-Active<br />- 1：Single-Active</td>
+<td>N&#x2F;A</td>
+</tr>
+<tr>
+<td>ESI  Label</td>
+<td>MPLS label</td>
+<td>有值（水平分割）</td>
+<td>N&#x2F;A</td>
+</tr>
+</tbody></table>
+<ul>
+<li>示列：</li>
+</ul>
+<p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202304221221154.png" alt="image-20230422122114855"></p>
 
     </div>
 
@@ -304,7 +427,10 @@
     <a href="/2023/04/05/09%20%7BBGP%E7%BD%91%E7%BB%9C%E5%AE%89%E5%85%A8%7D/" rel="prev" title="09 {BGP网络安全}">
       <i class="fa fa-chevron-left"></i> 09 {BGP网络安全}
     </a></div>
-      <div class="post-nav-item"></div>
+      <div class="post-nav-item">
+    <a href="/2023/04/15/11%20%7B%E8%8B%B1%E8%AF%AD%7D/" rel="next" title="11 {英语}">
+      11 {英语} <i class="fa fa-chevron-right"></i>
+    </a></div>
     </div>
       </footer>
     
@@ -364,7 +490,7 @@
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Virtual-Private-LAN-Service-VPLS"><span class="nav-number">1.</span> <span class="nav-text">Virtual Private LAN Service (VPLS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ethernet-VPN-EVPN"><span class="nav-number">2.</span> <span class="nav-text">Ethernet VPN (EVPN)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E4%BC%A0%E7%BB%9FVPLS%E7%9A%84%E9%97%AE%E9%A2%98"><span class="nav-number">2.1.</span> <span class="nav-text">传统VPLS的问题</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#Virtual-Private-LAN-Service-VPLS"><span class="nav-number">1.</span> <span class="nav-text">Virtual Private LAN Service (VPLS)</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Ethernet-VPN-EVPN"><span class="nav-number">2.</span> <span class="nav-text">Ethernet VPN (EVPN)</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%8A%9F%E8%83%BD"><span class="nav-number">2.1.</span> <span class="nav-text">功能</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#EVPN-Service-Models"><span class="nav-number">2.2.</span> <span class="nav-text">EVPN Service Models</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN-Based-Service-Interface"><span class="nav-number">2.2.1.</span> <span class="nav-text">VLAN Based Service Interface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN-Bundle-Service-Interface"><span class="nav-number">2.2.2.</span> <span class="nav-text">VLAN Bundle Service Interface</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#VLAN-Aware-Bundle-Service-Interface"><span class="nav-number">2.2.3.</span> <span class="nav-text">VLAN Aware Bundle Service Interface</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E7%96%91%E9%97%AE"><span class="nav-number">2.3.</span> <span class="nav-text">疑问</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-RT-1-Per-EVI-Ethernet-Auto-Discovery%E4%BD%9C%E7%94%A8%EF%BC%9F"><span class="nav-number">2.3.1.</span> <span class="nav-text">1. RT-1 Per EVI Ethernet Auto-Discovery作用？</span></a></li></ol></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -380,7 +506,7 @@
       <div class="site-state-item site-state-posts">
           <a href="/archives/">
         
-          <span class="site-state-item-count">10</span>
+          <span class="site-state-item-count">11</span>
           <span class="site-state-item-name">posts</span>
         </a>
       </div>
