@@ -9,7 +9,7 @@
 
 <blockquote>
 <p>如果hexo d报错</p>
-<p>ssh -T <a href="mailto:&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;">&#103;&#105;&#x74;&#x40;&#x67;&#105;&#x74;&#x68;&#x75;&#x62;&#46;&#x63;&#111;&#x6d;</a> # 来测试是否有权限</p>
+<p>ssh -T <a href="mailto:&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;">&#103;&#105;&#116;&#64;&#x67;&#x69;&#x74;&#x68;&#117;&#98;&#x2e;&#99;&#111;&#x6d;</a> # 来测试是否有权限</p>
 <p>如果出现：<code>git@github.com: Permission denied (publickey).</code>错误，则继续操作如下两步：</p>
 <p>ssh-agent -s<br>ssh-add ~&#x2F;.ssh&#x2F;id_rsa </p>
 </blockquote>
@@ -29,7 +29,7 @@
 
 
 <p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_variables&#x2F;base.styl</p>
-<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="attribute">Font</span> families.</span><br><span class="line">$<span class="attribute">font-family</span>-chinese      = &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;;</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-base         = $<span class="attribute">font-family</span>-chinese, sans-serif;</span><br><span class="line">$<span class="attribute">font-family</span>-base         = get_font_family(&#x27;global&#x27;), $<span class="attribute">font-family</span>-chinese, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-logo         = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-logo         = get_font_family(&#x27;title&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-headings     = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-headings     = get_font_family(&#x27;headings&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-posts        = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-posts        = get_font_family(&#x27;posts&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese;</span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = get_font_family(&#x27;codes&#x27;), SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese if get_font_family(&#x27;codes&#x27;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// <span class="attribute">Font</span> size</span><br><span class="line">$<span class="attribute">font-size</span>-base           =  <span class="number">1.2em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smallest       = .<span class="number">7em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smaller        = .<span class="number">75em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-small          = .<span class="number">9em</span>; # 修改代码块字体</span><br><span class="line">$<span class="attribute">font-size</span>-medium         = <span class="number">1em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-large          = <span class="number">1.125em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-larger         = <span class="number">1.25em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-largest        = <span class="number">1.5em</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line">// <span class="attribute">Font</span> families.</span><br><span class="line">$<span class="attribute">font-family</span>-chinese      = &quot;PingFang SC&quot;, &quot;Microsoft YaHei&quot;;</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-base         = $<span class="attribute">font-family</span>-chinese, sans-serif;</span><br><span class="line">$<span class="attribute">font-family</span>-base         = get_font_family(&#x27;global&#x27;), $<span class="attribute">font-family</span>-chinese, sans-serif if get_font_family(&#x27;global&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-logo         = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-logo         = get_font_family(&#x27;title&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;title&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-headings     = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-headings     = get_font_family(&#x27;headings&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;headings&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-posts        = $<span class="attribute">font-family</span>-base;</span><br><span class="line">$<span class="attribute">font-family</span>-posts        = get_font_family(&#x27;posts&#x27;), $<span class="attribute">font-family</span>-base if get_font_family(&#x27;posts&#x27;);</span><br><span class="line"></span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese;</span><br><span class="line">$<span class="attribute">font-family</span>-monospace    = get_font_family(&#x27;codes&#x27;), SourceHanSansSC, puhui65, consolas, Menlo, monospace, $<span class="attribute">font-family</span>-chinese if get_font_family(&#x27;codes&#x27;);</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">// <span class="attribute">Font</span> size</span><br><span class="line">$<span class="attribute">font-size</span>-base           =  <span class="number">1.2em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smallest       = .<span class="number">7em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-smaller        = .<span class="number">75em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-small          = .<span class="number">9em</span>; </span><br><span class="line">$<span class="attribute">font-size</span>-medium         = <span class="number">1em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-large          = <span class="number">1.125em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-larger         = <span class="number">1.25em</span>;</span><br><span class="line">$<span class="attribute">font-size</span>-largest        = <span class="number">1.5em</span>;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
 
 
 
@@ -44,6 +44,15 @@
 
 
 <figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="comment">/* 字体颜色 */</span></span><br><span class="line"><span class="selector-tag">body</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: red;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">/* 字体透明度 */</span></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">opacity</span>: <span class="number">0.5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">p</span> &#123;</span><br><span class="line">  <span class="attribute">color</span>: <span class="built_in">rgba</span>(<span class="number">255</span>, <span class="number">0</span>, <span class="number">0</span>, <span class="number">0.5</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="代码字体"><a href="#代码字体" class="headerlink" title="代码字体"></a>代码字体</h4><p>~&#x2F;blog&#x2F;themes&#x2F;next&#x2F;source&#x2F;css&#x2F;_common&#x2F;scaffolding&#x2F;highlight&#x2F;highlight.styl</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">// Placeholder: <span class="variable">$code</span>-block</span><br><span class="line"><span class="variable">$code</span>-block &#123;</span><br><span class="line">  background: <span class="variable">$highlight</span>-background;</span><br><span class="line">  color: <span class="variable">$highlight</span>-foreground;</span><br><span class="line">  line-height: <span class="variable">$line</span>-height-code-block;</span><br><span class="line">  margin: 0 auto 20px;</span><br><span class="line">  font-size: 0.9em</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
 
 
 
@@ -484,8 +493,103 @@
 ]]></content>
   </entry>
   <entry>
-    <title>11 {英语}</title>
-    <url>/2023/04/15/11%20%7B%E8%8B%B1%E8%AF%AD%7D/</url>
+    <title>12 {网络韧性}</title>
+    <url>/2023/04/15/12%20%7B%E7%BD%91%E7%BB%9C%E9%9F%A7%E6%80%A7%7D/</url>
+    <content><![CDATA[<h2 id="Network-Resilience-Smart-OOB-amp-Failover-To-Cellular-opengear-com"><a href="#Network-Resilience-Smart-OOB-amp-Failover-To-Cellular-opengear-com" class="headerlink" title="Network Resilience: Smart OOB &amp; Failover To Cellular (opengear.com)"></a><a href="https://opengear.com/solution/network-resilience">Network Resilience: Smart OOB &amp; Failover To Cellular (opengear.com)</a></h2><blockquote>
+<p>Network resilience is the ability to provide and maintain an acceptable level of service in the face of faults that challenge normal operations. </p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>网络</category>
+      </categories>
+      <tags>
+        <tag>网络</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>12 {路飞学城}</title>
+    <url>/2023/04/15/13%20%7B%E8%B7%AF%E9%A3%9E%E5%AD%A6%E5%9F%8E%7D/</url>
     <content><![CDATA[]]></content>
+      <categories>
+        <category>项目管理</category>
+      </categories>
+      <tags>
+        <tag>学习</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>14 {Sublime Text}</title>
+    <url>/2023/04/15/14%20%7BSublime%20Text%7D/</url>
+    <content><![CDATA[<h2 id="基础"><a href="#基础" class="headerlink" title="基础"></a>基础</h2><p>MAC电脑，快捷键：<code>CMD+SHIFT+P</code></p>
+<span id="more"></span> 
+
+
+
+<h2 id="Python代码自动补齐"><a href="#Python代码自动补齐" class="headerlink" title="Python代码自动补齐"></a>Python代码自动补齐</h2><ul>
+<li>安装插件<code>Anaconda</code></li>
+<li>新建一个项目并且替换python编译环境<code>&quot;conda_environment&quot;:</code></li>
+</ul>
+<div class="note info">
+            <p>print(sys.executable)查看</p>
+          </div>
+
+<ul>
+<li>将文件放入项目中，”folders”里面的”path”</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line"> <span class="string">&quot;conda_environment&quot;</span>: <span class="string">&quot;/Users/xx/opt/anaconda3/envs/py-310&quot;</span>,</span><br><span class="line"> <span class="string">&quot;build_systems&quot;</span>:</span><br><span class="line"> [</span><br><span class="line">  &#123;</span><br><span class="line">   <span class="string">&quot;file_regex&quot;</span>: <span class="string">&quot;^[ ]*File \&quot;(...*?)\&quot;, line ([0-9]*)&quot;</span>,</span><br><span class="line">   <span class="string">&quot;name&quot;</span>: <span class="string">&quot;Anaconda Python Builder&quot;</span>,</span><br><span class="line">   <span class="string">&quot;selector&quot;</span>: <span class="string">&quot;source.python&quot;</span>,</span><br><span class="line">   <span class="string">&quot;shell_cmd&quot;</span>: <span class="string">&quot;\&quot;python\&quot; -u \&quot;<span class="variable">$file</span>\&quot;&quot;</span>,</span><br><span class="line">   <span class="string">&quot;encoding&quot;</span>: <span class="string">&quot;utf-8&quot;</span>,</span><br><span class="line">  &#125;</span><br><span class="line"> ],</span><br><span class="line"> <span class="string">&quot;folders&quot;</span>:</span><br><span class="line"> [</span><br><span class="line">  &#123;</span><br><span class="line">   <span class="string">&quot;path&quot;</span>: <span class="string">&quot;/Users/xx/Python/2023&quot;</span></span><br><span class="line">  &#125;</span><br><span class="line"> ],</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="主题"><a href="#主题" class="headerlink" title="主题"></a>主题</h2><ul>
+<li><a href="https://packagecontrol.io/packages/Material%20Theme">Material Theme</a></li>
+<li><a href="https://xsinger.me/diy/238.html#!">Sublime Text 3的标签栏和侧边栏更改字体和大小</a></li>
+</ul>
+]]></content>
+  </entry>
+  <entry>
+    <title>11 {CSS}</title>
+    <url>/2023/04/15/11%20%7B%E5%A5%87%E7%89%B9%E7%9A%84%E4%B8%80%E7%94%9F%7D/</url>
+    <content><![CDATA[<h2 id="CSS-盒子模型-Box-Model"><a href="#CSS-盒子模型-Box-Model" class="headerlink" title="CSS 盒子模型(Box Model)"></a>CSS 盒子模型(Box Model)</h2><p><img src="https://raw.githubusercontent.com/LiuMaoDou/Files/main/Pics/202305021827083.gif" alt="CSS box-model"></p>
+<ul>
+<li><strong>Margin(外边距)</strong> - 清除边框外的区域，外边距是透明的。</li>
+<li><strong>Border(边框)</strong> - 围绕在内边距和内容外的边框。</li>
+<li><strong>Padding(内边距)</strong> - 清除内容周围的区域，内边距是透明的。</li>
+<li><strong>Content(内容)</strong> - 盒子的内容，显示文本和图像。</li>
+</ul>
+<h3 id="Padding-Margin"><a href="#Padding-Margin" class="headerlink" title="Padding (Margin)"></a>Padding (Margin)</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">padding-top:25px;</span><br><span class="line">padding-bottom:25px;</span><br><span class="line">padding-right:50px;</span><br><span class="line">padding-left:50px;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>例子 1</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding</span>:<span class="number">10</span>px <span class="number">5</span>px <span class="number">15</span>px <span class="number">20</span>px;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上内边距是 10px</li>
+<li>右内边距是 5px</li>
+<li>下内边距是 15px</li>
+<li>左内边距是 20px</li>
+</ul>
+<p>例子 2</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding</span>:<span class="number">10</span>px <span class="number">5</span>px <span class="number">15</span>px;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上内边距是 10px</li>
+<li>右内边距和左内边距是 5px</li>
+<li>下内边距是 15px</li>
+</ul>
+<p>例子 3</p>
+<figure class="highlight apache"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding</span>:<span class="number">10</span>px <span class="number">5</span>px;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>上内边距和下内边距是 10px</li>
+<li>右内边距和左内边距是 5px</li>
+</ul>
+<p>例子 4</p>
+<figure class="highlight css"><table><tr><td class="code"><pre><span class="line"><span class="attribute">padding</span>:<span class="number">10px</span>;</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>所有 4 个内边距都是 10px</li>
+</ul>
+]]></content>
   </entry>
 </search>
